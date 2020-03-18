@@ -43,8 +43,6 @@
 
 
 
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
 
 
     <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -72,7 +70,7 @@
 <script>
     var yiliaConfig = {
         fancybox: true,
-        animate: true,
+        animate: false,
         isHome: false,
         isPost: true,
         isArchive: false,
@@ -219,7 +217,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">努力学技术</div>
                 </section>
                 
             </div>
@@ -450,21 +448,6 @@
   </div>
   
     
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2020/03/16/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80-%E5%9F%BA%E7%A1%80/">01-移动端布局-流式布局-基础</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">辛猿毅码</a></p>
-        <p><span>发布时间:</span>2020-03-16, 13:23:45</p>
-        <p><span>最后更新:</span>2020-03-17, 16:43:00</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/03/16/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80-%E5%9F%BA%E7%A1%80/" title="01-移动端布局-流式布局-基础">http://yoursite.com/2020/03/16/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80-%E5%9F%BA%E7%A1%80/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/03/16/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80-%E5%9F%BA%E7%A1%80/　　作者: 辛猿毅码" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
 
 
     <nav id="article-nav">
@@ -597,22 +580,6 @@
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
 
 
 
@@ -628,6 +595,23 @@
         $("a[target=_blank]").removeAttr("target");
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
