@@ -6,19 +6,19 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="https://code-ape.gitee.io">
  
 
-  <title>04-HTML的head标签 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>02-HTML的标签英文全称及简单描述 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页标题标签1&lt;title&gt;标题名&lt;&#x2F;title&gt;">
+  <meta name="description" content="摘要  本文列出HTML的标签英文全称和释义描述，有助于记忆理解，后续会不断补充">
 <meta property="og:type" content="article">
-<meta property="og:title" content="04-HTML的head标签">
-<meta property="og:url" content="http://yoursite.com/2020/03/15/04-HTML%E7%9A%84head%E6%A0%87%E7%AD%BE/index.html">
+<meta property="og:title" content="02-HTML的标签英文全称及简单描述">
+<meta property="og:url" content="https://code-ape.gitee.io/article/59ca2a15.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="网页标题标签1&lt;title&gt;标题名&lt;&#x2F;title&gt;">
-<meta property="article:published_time" content="2020-03-15T12:15:21.000Z">
-<meta property="article:modified_time" content="2020-03-17T13:49:42.929Z">
+<meta property="og:description" content="摘要  本文列出HTML的标签英文全称和释义描述，有助于记忆理解，后续会不断补充">
+<meta property="article:published_time" content="2020-03-15T11:36:05.000Z">
+<meta property="article:modified_time" content="2020-03-18T13:53:39.940Z">
 <meta property="article:author" content="辛猿毅码">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="HTML">
@@ -46,10 +46,60 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="mymenucontainer" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
     <div class="left-col" q-class="show:isShow">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #4d4d4d">
+	<!-- 《添加“心知天气”-->
+
+	<!-- 《添加“心知天气”-->
+	<div id="tp-weather-widget"></div>
+	<script>
+			(function(T, h, i, n, k, P, a, g, e) {
+				g = function() {
+					P = h.createElement(i);
+					a = h.getElementsByTagName(i)[0];
+					P.src = k;
+					P.charset = "utf-8";
+					P.async = 1;
+					a.parentNode.insertBefore(P, a)
+				};
+				T["ThinkPageWeatherWidgetObject"] = n;
+				T[n] || (T[n] = function() {
+					(T[n].q = T[n].q || []).push(arguments)
+				});
+				T[n].l = +new Date();
+				if (T.attachEvent) {
+					T.attachEvent("onload", g)
+				} else {
+					T.addEventListener("load", g, false)
+				}
+			}(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
+		</script>
+		<script>
+			tpwidget("init", {
+				"flavor": "slim",
+				"location": "WM6N2PM3WY2K",
+				"geolocation": "enabled",
+				"language": "zh-chs",
+				"unit": "c",
+				"theme": "chameleon",
+				"container": "tp-weather-widget",
+				"bubble": "enabled",
+				"alarmType": "badge",
+				"color": "#FFFFFF",
+				"uid": "U88B4B2797",
+				"hash": "c9d7cb43b80ffece52c9a1ebbfbca65f"
+			});
+			tpwidget("show");
+		</script>
+	
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,11 +113,11 @@
 		
 		
 <form id="search-form"> <!-- 搜索框相关 -->
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
     <i class="fa fa-times" onclick="resetSearch()"></i> <!-- 清空/重置搜索框 -->
 </form>
 <div id="local-search-result"></div> <!-- 搜索结果区 -->
-<p class='no-result'>No results found </p> <!-- 无匹配时显示，注意请在 CSS 中设置默认隐藏 -->
+<p class='no-result'>未找到相关结果</p> <!-- 无匹配时显示，注意请在 CSS 中设置默认隐藏 -->
         
 		<nav class="header-menu">
 			<ul>
@@ -101,8 +151,11 @@
 					<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+			
 		</nav>
+		
 	</header>		
+	
 </div>
 
     </div>
@@ -165,14 +218,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-04-HTML的head标签" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-02-HTML的标签英文全称及简单描述" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      04-HTML的head标签
+      02-HTML的标签英文全称及简单描述
     </h1>
   
 
@@ -183,8 +236,8 @@
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/2020/03/15/04-HTML%E7%9A%84head%E6%A0%87%E7%AD%BE/" class="archive-article-date">
-  	<time datetime="2020-03-15T12:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
+<a href="/article/59ca2a15.html" class="archive-article-date">
+  	<time datetime="2020-03-15T11:36:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
 </a>
         <!-- 开始添加字数统计-->
         
@@ -193,7 +246,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">390字</span>
+        <span class="post-count">413字</span>
       </span>
     </span>
 
@@ -202,7 +255,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">≈1分钟</span>
       </span>
     </span>
 </div>
@@ -212,25 +265,290 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="网页标题标签"><a href="#网页标题标签" class="headerlink" title="网页标题标签"></a>网页标题标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>标题名<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+        <blockquote>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  本文列出HTML的标签英文全称和释义描述，有助于记忆理解，后续会不断补充</p>
+</blockquote>
 <a id="more"></a>
 
-<h2 id="编码格式标签"><a href="#编码格式标签" class="headerlink" title="编码格式标签"></a>编码格式标签</h2><h3 id="HTML4"><a href="#HTML4" class="headerlink" title="HTML4"></a>HTML4</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span><span class="attr">content</span>=<span class="string">"text/html;charset=utf-8"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="网页搜索优化标签"><a href="#网页搜索优化标签" class="headerlink" title="网页搜索优化标签"></a>网页搜索优化标签</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="网页描述"><a href="#网页描述" class="headerlink" title="网页描述"></a>网页描述</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="网页指定跳转标签"><a href="#网页指定跳转标签" class="headerlink" title="网页指定跳转标签"></a>网页指定跳转标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h2><p>css引入标签和js引入标签(后面学习)</p>
-<h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码:"></a>示例源码:</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--head标签中主要配置浏览器的配置信息--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页标题标签：告诉浏览器使用什么标题显示网页--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>html 学习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--字符编码标签:告诉浏览器使用指定的编码格式解析文档--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页解析编码格式配置(HTML5)--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--文档编码格式设置(HTML4)--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--&lt;meta http-equiv="content-type" </span></span><br><span class="line"><span class="comment">			content="text/html;charset=utf-8"/&gt;--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">			了解：</span></span><br><span class="line"><span class="comment">				关键字</span></span><br><span class="line"><span class="comment">				网页描述</span></span><br><span class="line"><span class="comment">				作者</span></span><br><span class="line"><span class="comment">			作用：</span></span><br><span class="line"><span class="comment">				提升网页在浏览器中的搜索概率。</span></span><br><span class="line"><span class="comment">		--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页搜索优化标签--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--关键字--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"html,study,it,前端"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页描述--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"今天天气真好，很适合学习html"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--作者--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"辛猿毅码"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页指定跳转标签--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--5秒后跳转到指定url--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"5;url=http://www.baidu.com"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		this is my second html.</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<table>
+<thead>
+<tr>
+<th>HTML标签</th>
+<th>英文全称</th>
+<th>中文释义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>Anchor</td>
+<td>锚</td>
+</tr>
+<tr>
+<td>abbr</td>
+<td>Abbreviation</td>
+<td>缩写词</td>
+</tr>
+<tr>
+<td>acronym</td>
+<td>Acronym</td>
+<td>取首字母的缩写词</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Address</td>
+<td>地址</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>alter</td>
+<td>替用(一般是图片显示不出的提示)</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Bold</td>
+<td>粗体（文本）</td>
+</tr>
+<tr>
+<td>bdo</td>
+<td>Direction of Text Display</td>
+<td>文本显示方向</td>
+</tr>
+<tr>
+<td>big</td>
+<td>Big</td>
+<td>变大（文本）</td>
+</tr>
+<tr>
+<td>blockquote</td>
+<td>Block Quotation</td>
+<td>区块引用语</td>
+</tr>
+<tr>
+<td>br</td>
+<td>Break</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>cell</td>
+<td>cell</td>
+<td>巢</td>
+</tr>
+<tr>
+<td>cellpadding</td>
+<td>cellpadding</td>
+<td>巢补白</td>
+</tr>
+<tr>
+<td>cellspacing</td>
+<td>cellspacing</td>
+<td>巢空间</td>
+</tr>
+<tr>
+<td>center</td>
+<td>Centered</td>
+<td>居中（文本）</td>
+</tr>
+<tr>
+<td>cite</td>
+<td>Citation</td>
+<td>引用</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Code</td>
+<td>源代码（文本）</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>Definition Description</td>
+<td>定义描述</td>
+</tr>
+<tr>
+<td>del</td>
+<td>Deleted</td>
+<td>删除（的文本）</td>
+</tr>
+<tr>
+<td>dfn</td>
+<td>Defines a Definition Term</td>
+<td>定义定义条目</td>
+</tr>
+<tr>
+<td>div</td>
+<td>Division</td>
+<td>分隔</td>
+</tr>
+<tr>
+<td>dl</td>
+<td>Definition List</td>
+<td>定义列表</td>
+</tr>
+<tr>
+<td>dt</td>
+<td>Definition Term</td>
+<td>定义术语</td>
+</tr>
+<tr>
+<td>em</td>
+<td>Emphasized</td>
+<td>加重（文本）</td>
+</tr>
+<tr>
+<td>font</td>
+<td>Font</td>
+<td>字体</td>
+</tr>
+<tr>
+<td>h1~h6</td>
+<td>Header 1 to Header 6</td>
+<td>标题1到标题6</td>
+</tr>
+<tr>
+<td>hr</td>
+<td>Horizontal Rule</td>
+<td>水平尺</td>
+</tr>
+<tr>
+<td>href</td>
+<td>hypertext reference</td>
+<td>超文本引用</td>
+</tr>
+<tr>
+<td>i</td>
+<td>Italic</td>
+<td>斜体（文本）</td>
+</tr>
+<tr>
+<td>iframe</td>
+<td>Inline frame</td>
+<td>定义内联框架</td>
+</tr>
+<tr>
+<td>ins</td>
+<td>Inserted</td>
+<td>插入（的文本）</td>
+</tr>
+<tr>
+<td>kbd</td>
+<td>Keyboard</td>
+<td>键盘（文本）</td>
+</tr>
+<tr>
+<td>li</td>
+<td>List Item</td>
+<td>列表项目</td>
+</tr>
+<tr>
+<td>nl</td>
+<td>navigation lists</td>
+<td>导航列表</td>
+</tr>
+<tr>
+<td>ol</td>
+<td>Ordered List</td>
+<td>排序列表</td>
+</tr>
+<tr>
+<td>optgroup</td>
+<td>Option group</td>
+<td>定义选项组</td>
+</tr>
+<tr>
+<td>p</td>
+<td>Paragraph</td>
+<td>段落</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>Preformatted</td>
+<td>预定义格式（文本）</td>
+</tr>
+<tr>
+<td>q</td>
+<td>Quotation</td>
+<td>引用语</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>Reload</td>
+<td>加载</td>
+</tr>
+<tr>
+<td>s/ strike</td>
+<td>Strikethrough</td>
+<td>删除线</td>
+</tr>
+<tr>
+<td>samp</td>
+<td>Sample</td>
+<td>示例（文本</td>
+</tr>
+<tr>
+<td>small</td>
+<td>Small</td>
+<td>变小（文本）</td>
+</tr>
+<tr>
+<td>span</td>
+<td>Span</td>
+<td>范围</td>
+</tr>
+<tr>
+<td>src</td>
+<td>Source</td>
+<td>源文件链接</td>
+</tr>
+<tr>
+<td>strong</td>
+<td>Strong</td>
+<td>加重（文本）</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>Subscripted</td>
+<td>下标（文本）</td>
+</tr>
+<tr>
+<td>sup</td>
+<td>Superscripted</td>
+<td>上标（文本）</td>
+</tr>
+<tr>
+<td>td</td>
+<td>table data cell</td>
+<td>表格中的一个单元格</td>
+</tr>
+<tr>
+<td>th</td>
+<td>table header cell</td>
+<td>表格中的表头</td>
+</tr>
+<tr>
+<td>tr</td>
+<td>table row</td>
+<td>表格中的一行</td>
+</tr>
+<tr>
+<td>tt</td>
+<td>Teletype</td>
+<td>打印机（文本）</td>
+</tr>
+<tr>
+<td>u</td>
+<td>Underlined</td>
+<td>下划线（文本）</td>
+</tr>
+<tr>
+<td>ul</td>
+<td>Unordered List</td>
+<td>不排序列表</td>
+</tr>
+<tr>
+<td>var</td>
+<td>Variable</td>
+<td>变量（文本）</td>
+</tr>
+</tbody></table>
 
       
 
@@ -335,7 +653,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/15/04-HTML%E7%9A%84head%E6%A0%87%E7%AD%BE/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://code-ape.gitee.io/article/59ca2a15.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -349,18 +667,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/15/05-HTML%E7%9A%84%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/article/1b16d537.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          05-HTML的文本标签
+          03-HTML的注释&amp;标准文档结构
         
       </div>
     </a>
   
   
-    <a href="/2020/03/15/03-HTML%E7%9A%84%E6%B3%A8%E9%87%8A-%E6%A0%87%E5%87%86%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">03-HTML的注释&amp;标准文档结构</div>
+    <a href="/article/eda35e1b.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">01-HTML的概念&amp;三大基石</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -387,7 +705,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网页标题标签"><span class="toc-number">1.</span> <span class="toc-text">网页标题标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码格式标签"><span class="toc-number">2.</span> <span class="toc-text">编码格式标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML4"><span class="toc-number">2.1.</span> <span class="toc-text">HTML4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5"><span class="toc-number">2.2.</span> <span class="toc-text">HTML5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页搜索优化标签"><span class="toc-number">3.</span> <span class="toc-text">网页搜索优化标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">3.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网页描述"><span class="toc-number">3.2.</span> <span class="toc-text">网页描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作者"><span class="toc-number">3.3.</span> <span class="toc-text">作者</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页指定跳转标签"><span class="toc-number">4.</span> <span class="toc-text">网页指定跳转标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他标签"><span class="toc-number">5.</span> <span class="toc-text">其他标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例源码"><span class="toc-number">6.</span> <span class="toc-text">示例源码:</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -398,6 +716,32 @@
 
 
 
+  
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "7IWgKBQMNjIikMiLrkSjUWeE-gzGzoHsz",
+            app_key: "3ftHf76PWRz1YMu75SyW8TRB",
+            placeholder: "看了这么久，不说点什么吗？",
+            avatar:"monsterid"
+        });
+    }
+</script>
+  </section>
+  
   
   
   
@@ -664,4 +1008,29 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </div>
   </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+<!-- 《添加折叠按钮脚本 -->
+<script>
+  var hide = false;
+  function myFunction(x) {
+      x.classList.toggle("change");
+      if(hide == false){
+          $(".left-col").css('display', 'none');
+          $(".mid-col").css("left", 6);
+          $(".tools-col").css('display', 'none');
+          $(".tools-col.hide").css('display', 'none');
+          hide = true;
+
+          $(".mymenucontainer").css('left', '0');
+
+      }else{
+          $(".left-col").css('display', '');
+          $(".mid-col").css("left", 300);
+          $(".tools-col").css('display', '');
+          $(".tools-col.hide").css('display', '');
+          hide = false;
+
+          $(".mymenucontainer").css('left', '260px');
+      }
+  }
+</script>
 </html>

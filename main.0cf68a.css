@@ -2927,7 +2927,7 @@ pre {
     .body-wrap {
         margin-bottom: 0
     }
-    .left-col {
+    .left-col,.mymenucontainer{
         display: none
     }
     .mid-col {
@@ -4055,11 +4055,11 @@ caption, th, td {
 /*搜索框*/
 .search {
   width: 68%;
-  height: 18px;
+  height: 20px;
   margin-top: 1px;
   padding: 5px;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 14px;
   border: 2px solid transparent;
   border-bottom: 2px solid #d3d3d3;
   border-radius: 2px;
@@ -4147,4 +4147,57 @@ p.no-result {
   color: #808080;
   font-family: font-serif serif;
   border-bottom: 2px solid #d3d3d3;
+}
+/*左边栏目按钮*/
+.mymenucontainer {
+	display:block;
+	cursor:pointer;
+	left:260px;
+	top:0;
+	width:35px;
+	height:35px;
+	z-index:9999;
+	position:fixed;
+}
+.bar1 {
+	width:35px;
+	height:3px;
+	background-color:#fff;
+	margin:6px 0;
+	transition:1s;
+	-webkit-transform:rotate(-45deg) translate(-8px,8px);
+	transform:rotate(-45deg) translate(-8px,8px);
+}
+.bar2 {
+	width:35px;
+	height:3px;
+	background-color:#fff;
+	margin:6px 0;
+	transition:1s;
+	opacity:0;
+}
+.bar3 {
+	width:35px;
+	height:3px;
+	background-color:#fff;
+	margin:6px 0;
+	transition:1s;
+	-webkit-transform:rotate(45deg) translate(-4px,-6px);
+	transform:rotate(45deg) translate(-4px,-6px);
+}
+.change .bar1 {
+	-webkit-transform:rotate(0deg) translate(0px,0px);
+	transform:rotate(0deg) translate(0px,0px);
+    background-color:#000;
+}
+.change .bar2 {
+    background-color:#000;
+	opacity:1;
+    
+}
+.change .bar3 {
+    
+	-webkit-transform:rotate(0deg) translate(0px,0px);
+	transform:rotate(0deg) translate(0px,0px);
+    background-color:#000;
 }
