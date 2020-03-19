@@ -82,49 +82,6 @@ var _hmt = _hmt || [];
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <div class="overlay" style="background: #4d4d4d">
-	<!-- 《添加“心知天气”-->
-	
-	<!-- 《添加“心知天气”-->
-	<div id="tp-weather-widget"></div>
-	<script>
-		(function (T, h, i, n, k, P, a, g, e) {
-			g = function () {
-				P = h.createElement(i);
-				a = h.getElementsByTagName(i)[0];
-				P.src = k;
-				P.charset = "utf-8";
-				P.async = 1;
-				a.parentNode.insertBefore(P, a)
-			};
-			T["ThinkPageWeatherWidgetObject"] = n;
-			T[n] || (T[n] = function () {
-				(T[n].q = T[n].q || []).push(arguments)
-			});
-			T[n].l = +new Date();
-			if (T.attachEvent) {
-				T.attachEvent("onload", g)
-			} else {
-				T.addEventListener("load", g, false)
-			}
-		}(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
-	</script>
-	<script>
-		tpwidget("init", {
-			"flavor": "slim",
-			"location": "WM6N2PM3WY2K",
-			"geolocation": "enabled",
-			"language": "zh-chs",
-			"unit": "c",
-			"theme": "chameleon",
-			"container": "tp-weather-widget",
-			"bubble": "enabled",
-			"alarmType": "badge",
-			"color": "#FFFFFF",
-			"uid": "U88B4B2797",
-			"hash": "c9d7cb43b80ffece52c9a1ebbfbca65f"
-		});
-		tpwidget("show");
-	</script>
 	
 </div>
 <div class="intrude-less">
@@ -311,7 +268,8 @@ var _hmt = _hmt || [];
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	  <div class="overlay js-overlay" style="background: #4d4d4d">
+	</div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -855,11 +813,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
- <!-- 代码块复制功能 -->
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
- <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="/js/clipboard.js"></script>  -->
-<script type="text/javascript" src="/js/clipboard_use.js"></script>
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="/js/clipboard.js"></script>  -->
+  <script type="text/javascript" src="/js/clipboard_use.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 <!-- 《添加折叠按钮脚本 -->
 <script>
@@ -886,5 +844,33 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     }
   }
 </script>
+<!-- 和风天气插件代码 -->
+<div id="he-plugin-simple"></div>
+<script>
+  WIDGET = {
+    CONFIG: {
+      "modules": "01234",
+      "background": 1,
+      "tmpColor": "FFFFFF",
+      "tmpSize": "12",
+      "cityColor": "FFFFFF",
+      "citySize": "12",
+      "aqiSize": "12",
+      "weatherIconSize": "15",
+      "alertIconSize": "15",
+      "padding": "5px 5px 5px 5px",
+      "shadow": "1",
+      "language": "zh",
+      "borderRadius": 5,
+      "fixed": "true",
+      "vertical": "middle",
+      "horizontal": "center",
+      "right": "5",
+      "top": "5",
+      "key": "e08aeb83b6ff44429447fc7dc5fa5921"
+    }
+  }
+</script>
+<script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
 
 </html>
