@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <div class="overlay" style="background: #4d4d4d">
-	
+
 </div>
 <div class="intrude-less">
 	<header id="header" class="inner">
@@ -228,47 +228,83 @@ var _hmt = _hmt || [];
 			
 		<li><a href="/">主页</a></li>
 		
+		<li><a href="/categories">分类</a></li>
+		
 		<li><a href="/archives/">归档</a></li>
 		
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-    		
-		
-		<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-		
-		
-		
-		
-		
-		<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-		
-		
+			[ 总 文 章 数 ] : 6 篇
+		</nav>
+		<nav class="header-smart-menu">
+			[ 总 字 数 ] : <span class="post-count">2.7k 字</span>
+		</nav>
+		<nav class="header-smart-menu">
+			
+			
+			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+			
+			
+			
+			
+			
+			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+			
+			
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
-		<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
-				class="icon-github"></i></a>
-		
-		<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
-				class="icon-bilibili"></i></a>
-		
-		<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
-				class="icon-mail"></i></a>
-		
-			</div>
+			<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
+					class="icon-github"></i></a>
 			
+			<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
+					class="icon-bilibili"></i></a>
+			
+			<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
+					class="icon-mail"></i></a>
+			
+			</div>
+			<!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
+
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+			<div id="aplayer" style="text-align:left"></div>
+			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+			<!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+			<script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+			<!-- 根据封面自适应主题色，主要是作用于进度条 -->
+			<script type="text/javascript">
+				const colorThief = new ColorThief();
+				const setTheme = (index) => {
+					if (!ap.list.audios[index].theme) {
+						colorThief.getColorAsync(ap.list.audios[index].cover, function (color) {
+							ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+						});
+					}
+				};
+				setTheme(ap.list.index);
+				ap.on('listswitch', (data) => {
+					setTheme(data.index);
+				});       
+			</script>
+			
+			<!-- 左侧边栏添加--APlayer音乐播放器》 -->
 		</nav>
-		
-	</header>		
-	
+
+	</header>
+
 </div>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
 	  <div class="overlay js-overlay" style="background: #4d4d4d">
+		
 	</div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
@@ -290,6 +326,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -303,14 +341,21 @@ var _hmt = _hmt || [];
 			        
 				</div>
 			</nav>
-
+			<nav class="header-subtitle" >
+				[ 总 文 章 数 ] : 6 篇
+			</nav>
+			<nav class="header-subtitle">
+				[ 总 字 数 ] : <span class="post-count">2.7k 字</span>
+			</nav>
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -459,6 +504,21 @@ var _hmt = _hmt || [];
 	</div>
 
           
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端开发/" class="article-tag-list-link color5">前端开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端开发/HTML/" class="article-tag-list-link color5">HTML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
         </div>
         <div class="clearfix"></div>
@@ -847,30 +907,29 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 <!-- 和风天气插件代码 -->
 <div id="he-plugin-simple"></div>
 <script>
-  WIDGET = {
-    CONFIG: {
-      "modules": "01234",
-      "background": 1,
-      "tmpColor": "FFFFFF",
-      "tmpSize": "12",
-      "cityColor": "FFFFFF",
-      "citySize": "12",
-      "aqiSize": "12",
-      "weatherIconSize": "15",
-      "alertIconSize": "15",
-      "padding": "5px 5px 5px 5px",
-      "shadow": "1",
-      "language": "zh",
-      "borderRadius": 5,
-      "fixed": "true",
-      "vertical": "middle",
-      "horizontal": "center",
-      "right": "5",
-      "top": "5",
-      "key": "e08aeb83b6ff44429447fc7dc5fa5921"
-    }
+WIDGET = {
+  CONFIG: {
+    "modules": "012",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": "12",
+    "cityColor": "FFFFFF",
+    "citySize": "12",
+    "aqiSize": "12",
+    "weatherIconSize": "15",
+    "alertIconSize": "15",
+    "padding": "5px 5px 5px 5px",
+    "shadow": "1",
+    "language": "zh",
+    "borderRadius": 5,
+    "fixed": "true",
+    "vertical": "middle",
+    "horizontal": "center",
+    "right": "5",
+    "top": "5",
+    "key": "35ea9d0762314f69831a746970b58c5f"
   }
+}
 </script>
 <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-
 </html>

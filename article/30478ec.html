@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <div class="overlay" style="background: #4d4d4d">
-	
+
 </div>
 <div class="intrude-less">
 	<header id="header" class="inner">
@@ -231,47 +231,83 @@ var _hmt = _hmt || [];
 			
 		<li><a href="/">主页</a></li>
 		
+		<li><a href="/categories">分类</a></li>
+		
 		<li><a href="/archives/">归档</a></li>
 		
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-    		
-		
-		<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-		
-		
-		
-		
-		
-		<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-		
-		
+			[ 总 文 章 数 ] : 6 篇
+		</nav>
+		<nav class="header-smart-menu">
+			[ 总 字 数 ] : <span class="post-count">2.7k 字</span>
+		</nav>
+		<nav class="header-smart-menu">
+			
+			
+			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+			
+			
+			
+			
+			
+			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+			
+			
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
-		<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
-				class="icon-github"></i></a>
-		
-		<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
-				class="icon-bilibili"></i></a>
-		
-		<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
-				class="icon-mail"></i></a>
-		
-			</div>
+			<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
+					class="icon-github"></i></a>
 			
+			<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
+					class="icon-bilibili"></i></a>
+			
+			<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
+					class="icon-mail"></i></a>
+			
+			</div>
+			<!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
+
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+			<div id="aplayer" style="text-align:left"></div>
+			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+			<!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+			<script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+			<!-- 根据封面自适应主题色，主要是作用于进度条 -->
+			<script type="text/javascript">
+				const colorThief = new ColorThief();
+				const setTheme = (index) => {
+					if (!ap.list.audios[index].theme) {
+						colorThief.getColorAsync(ap.list.audios[index].cover, function (color) {
+							ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+						});
+					}
+				};
+				setTheme(ap.list.index);
+				ap.on('listswitch', (data) => {
+					setTheme(data.index);
+				});       
+			</script>
+			
+			<!-- 左侧边栏添加--APlayer音乐播放器》 -->
 		</nav>
-		
-	</header>		
-	
+
+	</header>
+
 </div>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
 	  <div class="overlay js-overlay" style="background: #4d4d4d">
+		
 	</div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
@@ -293,6 +329,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -306,14 +344,21 @@ var _hmt = _hmt || [];
 			        
 				</div>
 			</nav>
-
+			<nav class="header-subtitle" >
+				[ 总 文 章 数 ] : 6 篇
+			</nav>
+			<nav class="header-subtitle">
+				[ 总 字 数 ] : <span class="post-count">2.7k 字</span>
+			</nav>
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -332,16 +377,16 @@ var _hmt = _hmt || [];
             <article id="post-04-HTML的head标签" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+      <header class=" article-header">
+  
   
     <h1 class="article-title" itemprop="name">
       04-HTML的head标签
     </h1>
   
 
-        
-        
+  
+  
 	<!-- 不蒜子统计 -->
 	<span  class="archive-article-date">
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
@@ -350,9 +395,9 @@ var _hmt = _hmt || [];
 <a href="/article/30478ec.html" class="archive-article-date">
   	<time datetime="2020-03-15T12:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
 </a>
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
+  <!-- 开始添加字数统计-->
+  
+  <div style="margin-top:10px;">
     <span class="post-time">
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
@@ -370,13 +415,40 @@ var _hmt = _hmt || [];
       </span>
     </span>
 </div>
-          
-        
-      </header>
+  
+  
+  </header>
+  
+  <!-- 目录内容 -->
+  
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <i class="fa fa-compass" aria-hidden="true"></i>
+    <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网页标题标签"><span class="toc-number">1.</span> <span class="toc-text">网页标题标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码格式标签"><span class="toc-number">2.</span> <span class="toc-text">编码格式标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML4"><span class="toc-number">2.1.</span> <span class="toc-text">HTML4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5"><span class="toc-number">2.2.</span> <span class="toc-text">HTML5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页搜索优化标签"><span class="toc-number">3.</span> <span class="toc-text">网页搜索优化标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">3.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网页描述"><span class="toc-number">3.2.</span> <span class="toc-text">网页描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作者"><span class="toc-number">3.3.</span> <span class="toc-text">作者</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页指定跳转标签"><span class="toc-number">4.</span> <span class="toc-text">网页指定跳转标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他标签"><span class="toc-number">5.</span> <span class="toc-text">其他标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例源码"><span class="toc-number">6.</span> <span class="toc-text">示例源码:</span></a></li></ol>
+  </div>
+  <script type="text/javascript">
+    function showToc() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:block");
+      show_toc_btn.setAttribute("style", "display:none");
+    };
+    function showBtn() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:none");
+      show_toc_btn.setAttribute("style", "display:block");
+    };
+  </script>
+  
+  <!-- 目录内容结束 -->
+  <div class="article-entry" itemprop="articleBody">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="网页标题标签"><a href="#网页标题标签" class="headerlink" title="网页标题标签"></a>网页标题标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>标题名<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <h2 id="网页标题标签"><a href="#网页标题标签" class="headerlink" title="网页标题标签"></a>网页标题标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>标题名<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
@@ -396,44 +468,45 @@ var _hmt = _hmt || [];
 <h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码:"></a>示例源码:</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--head标签中主要配置浏览器的配置信息--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页标题标签：告诉浏览器使用什么标题显示网页--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>html 学习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--字符编码标签:告诉浏览器使用指定的编码格式解析文档--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页解析编码格式配置(HTML5)--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--文档编码格式设置(HTML4)--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--&lt;meta http-equiv="content-type" </span></span><br><span class="line"><span class="comment">			content="text/html;charset=utf-8"/&gt;--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">			了解：</span></span><br><span class="line"><span class="comment">				关键字</span></span><br><span class="line"><span class="comment">				网页描述</span></span><br><span class="line"><span class="comment">				作者</span></span><br><span class="line"><span class="comment">			作用：</span></span><br><span class="line"><span class="comment">				提升网页在浏览器中的搜索概率。</span></span><br><span class="line"><span class="comment">		--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页搜索优化标签--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--关键字--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"html,study,it,前端"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页描述--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"今天天气真好，很适合学习html"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--作者--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"辛猿毅码"</span>/&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--网页指定跳转标签--&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--5秒后跳转到指定url--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"5;url=http://www.baidu.com"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		this is my second html.</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
-      
+    
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
+    
+    <div class="page-reward">
+      <a href="javascript:;" class="page-reward-btn tooltip-top">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
                   </div>
-                </span>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
               </span>
             </span>
-          </div>
-          </a>
+          </span>
         </div>
-      
+      </a>
     </div>
-    <div class="article-info article-info-index">
-      
-      
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -449,12 +522,12 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-      
+    
 
-      
+    
 
-      
-        
+    
+    
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -499,18 +572,18 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://code-ape.gitee.io/article/30478ec.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://code-ape.gitee.io/article/30478ec.html" alt="微信分享二维码">
     </div>
 </div>
 
 <div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
 
-  
+
 <nav id="article-nav">
   
     <a href="/article/d1478627.html" id="article-nav-newer" class="article-nav-link-wrap">
@@ -544,31 +617,29 @@ var _hmt = _hmt || [];
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网页标题标签"><span class="toc-number">1.</span> <span class="toc-text">网页标题标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码格式标签"><span class="toc-number">2.</span> <span class="toc-text">编码格式标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML4"><span class="toc-number">2.1.</span> <span class="toc-text">HTML4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5"><span class="toc-number">2.2.</span> <span class="toc-text">HTML5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页搜索优化标签"><span class="toc-number">3.</span> <span class="toc-text">网页搜索优化标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">3.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网页描述"><span class="toc-number">3.2.</span> <span class="toc-text">网页描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作者"><span class="toc-number">3.3.</span> <span class="toc-text">作者</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页指定跳转标签"><span class="toc-number">4.</span> <span class="toc-text">网页指定跳转标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他标签"><span class="toc-number">5.</span> <span class="toc-text">其他标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例源码"><span class="toc-number">6.</span> <span class="toc-text">示例源码:</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
 
 
-  
-    <section id="comments" class="comments">
-      <style>
-        .comments{margin:30px;padding:10px;background:#fff}
-        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
+
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div id="vcomment" class="comment"></div> 
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
@@ -586,17 +657,16 @@ var _hmt = _hmt || [];
         });
     }
 </script>
-  </section>
-  
-  
-  
-  
+</section>
 
-  
 
-  
 
-  
+
+
+
+
+
+
 
 
           </div>
@@ -887,30 +957,29 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 <!-- 和风天气插件代码 -->
 <div id="he-plugin-simple"></div>
 <script>
-  WIDGET = {
-    CONFIG: {
-      "modules": "01234",
-      "background": 1,
-      "tmpColor": "FFFFFF",
-      "tmpSize": "12",
-      "cityColor": "FFFFFF",
-      "citySize": "12",
-      "aqiSize": "12",
-      "weatherIconSize": "15",
-      "alertIconSize": "15",
-      "padding": "5px 5px 5px 5px",
-      "shadow": "1",
-      "language": "zh",
-      "borderRadius": 5,
-      "fixed": "true",
-      "vertical": "middle",
-      "horizontal": "center",
-      "right": "5",
-      "top": "5",
-      "key": "e08aeb83b6ff44429447fc7dc5fa5921"
-    }
+WIDGET = {
+  CONFIG: {
+    "modules": "012",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": "12",
+    "cityColor": "FFFFFF",
+    "citySize": "12",
+    "aqiSize": "12",
+    "weatherIconSize": "15",
+    "alertIconSize": "15",
+    "padding": "5px 5px 5px 5px",
+    "shadow": "1",
+    "language": "zh",
+    "borderRadius": 5,
+    "fixed": "true",
+    "vertical": "middle",
+    "horizontal": "center",
+    "right": "5",
+    "top": "5",
+    "key": "35ea9d0762314f69831a746970b58c5f"
   }
+}
 </script>
 <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-
 </html>

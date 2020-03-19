@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <div class="overlay" style="background: #4d4d4d">
-	
+
 </div>
 <div class="intrude-less">
 	<header id="header" class="inner">
@@ -231,47 +231,83 @@ var _hmt = _hmt || [];
 			
 		<li><a href="/">主页</a></li>
 		
+		<li><a href="/categories">分类</a></li>
+		
 		<li><a href="/archives/">归档</a></li>
 		
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-    		
-		
-		<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-		
-		
-		
-		
-		
-		<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-		
-		
+			[ 总 文 章 数 ] : 6 篇
+		</nav>
+		<nav class="header-smart-menu">
+			[ 总 字 数 ] : <span class="post-count">2.7k 字</span>
+		</nav>
+		<nav class="header-smart-menu">
+			
+			
+			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+			
+			
+			
+			
+			
+			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+			
+			
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
-		<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
-				class="icon-github"></i></a>
-		
-		<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
-				class="icon-bilibili"></i></a>
-		
-		<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
-				class="icon-mail"></i></a>
-		
-			</div>
+			<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
+					class="icon-github"></i></a>
 			
+			<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
+					class="icon-bilibili"></i></a>
+			
+			<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
+					class="icon-mail"></i></a>
+			
+			</div>
+			<!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
+
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+			<div id="aplayer" style="text-align:left"></div>
+			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+			<!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+			<script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+			<!-- 根据封面自适应主题色，主要是作用于进度条 -->
+			<script type="text/javascript">
+				const colorThief = new ColorThief();
+				const setTheme = (index) => {
+					if (!ap.list.audios[index].theme) {
+						colorThief.getColorAsync(ap.list.audios[index].cover, function (color) {
+							ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+						});
+					}
+				};
+				setTheme(ap.list.index);
+				ap.on('listswitch', (data) => {
+					setTheme(data.index);
+				});       
+			</script>
+			
+			<!-- 左侧边栏添加--APlayer音乐播放器》 -->
 		</nav>
-		
-	</header>		
-	
+
+	</header>
+
 </div>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
 	  <div class="overlay js-overlay" style="background: #4d4d4d">
+		
 	</div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
@@ -293,6 +329,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -306,14 +344,21 @@ var _hmt = _hmt || [];
 			        
 				</div>
 			</nav>
-
+			<nav class="header-subtitle" >
+				[ 总 文 章 数 ] : 6 篇
+			</nav>
+			<nav class="header-subtitle">
+				[ 总 字 数 ] : <span class="post-count">2.7k 字</span>
+			</nav>
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -332,16 +377,16 @@ var _hmt = _hmt || [];
             <article id="post-01-HTML的概念-三大基石" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+      <header class=" article-header">
+  
   
     <h1 class="article-title" itemprop="name">
       01-HTML的概念&amp;三大基石
     </h1>
   
 
-        
-        
+  
+  
 	<!-- 不蒜子统计 -->
 	<span  class="archive-article-date">
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
@@ -350,9 +395,9 @@ var _hmt = _hmt || [];
 <a href="/article/eda35e1b.html" class="archive-article-date">
   	<time datetime="2020-03-15T10:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
 </a>
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
+  <!-- 开始添加字数统计-->
+  
+  <div style="margin-top:10px;">
     <span class="post-time">
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
@@ -370,13 +415,40 @@ var _hmt = _hmt || [];
       </span>
     </span>
 </div>
-          
-        
-      </header>
+  
+  
+  </header>
+  
+  <!-- 目录内容 -->
+  
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <i class="fa fa-compass" aria-hidden="true"></i>
+    <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">2.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作用"><span class="toc-number">3.</span> <span class="toc-text">作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">4.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网的三大基石"><span class="toc-number">5.</span> <span class="toc-text">互联网的三大基石</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML的文档声明"><span class="toc-number">6.</span> <span class="toc-text">HTML的文档声明</span></a></li></ol>
+  </div>
+  <script type="text/javascript">
+    function showToc() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:block");
+      show_toc_btn.setAttribute("style", "display:none");
+    };
+    function showBtn() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:none");
+      show_toc_btn.setAttribute("style", "display:block");
+    };
+  </script>
+  
+  <!-- 目录内容结束 -->
+  <div class="article-entry" itemprop="articleBody">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
+    <blockquote>
 <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  本文简单介绍了HTML的概念和互联网的三大基石</p>
 </blockquote>
 <a id="more"></a>
@@ -393,44 +465,45 @@ var _hmt = _hmt || [];
 <h2 id="HTML的文档声明"><a href="#HTML的文档声明" class="headerlink" title="HTML的文档声明"></a>HTML的文档声明</h2><p>​    文件名.html 或者 文件名.htm</p>
 <p>​    注意：HTML是由浏览器解析执行的。</p>
 
-      
+    
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
+    
+    <div class="page-reward">
+      <a href="javascript:;" class="page-reward-btn tooltip-top">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
                   </div>
-                </span>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
               </span>
             </span>
-          </div>
-          </a>
+          </span>
         </div>
-      
+      </a>
     </div>
-    <div class="article-info article-info-index">
-      
-      
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -446,12 +519,12 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-      
+    
 
-      
+    
 
-      
-        
+    
+    
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -496,18 +569,18 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://code-ape.gitee.io/article/eda35e1b.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://code-ape.gitee.io/article/eda35e1b.html" alt="微信分享二维码">
     </div>
 </div>
 
 <div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
 
-  
+
 <nav id="article-nav">
   
     <a href="/article/59ca2a15.html" id="article-nav-newer" class="article-nav-link-wrap">
@@ -536,31 +609,29 @@ var _hmt = _hmt || [];
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">2.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作用"><span class="toc-number">3.</span> <span class="toc-text">作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">4.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网的三大基石"><span class="toc-number">5.</span> <span class="toc-text">互联网的三大基石</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML的文档声明"><span class="toc-number">6.</span> <span class="toc-text">HTML的文档声明</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
 
 
-  
-    <section id="comments" class="comments">
-      <style>
-        .comments{margin:30px;padding:10px;background:#fff}
-        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-      </style>
-      <div id="vcomment" class="comment"></div> 
+
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div id="vcomment" class="comment"></div> 
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
@@ -578,17 +649,16 @@ var _hmt = _hmt || [];
         });
     }
 </script>
-  </section>
-  
-  
-  
-  
+</section>
 
-  
 
-  
 
-  
+
+
+
+
+
+
 
 
           </div>
@@ -879,30 +949,29 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 <!-- 和风天气插件代码 -->
 <div id="he-plugin-simple"></div>
 <script>
-  WIDGET = {
-    CONFIG: {
-      "modules": "01234",
-      "background": 1,
-      "tmpColor": "FFFFFF",
-      "tmpSize": "12",
-      "cityColor": "FFFFFF",
-      "citySize": "12",
-      "aqiSize": "12",
-      "weatherIconSize": "15",
-      "alertIconSize": "15",
-      "padding": "5px 5px 5px 5px",
-      "shadow": "1",
-      "language": "zh",
-      "borderRadius": 5,
-      "fixed": "true",
-      "vertical": "middle",
-      "horizontal": "center",
-      "right": "5",
-      "top": "5",
-      "key": "e08aeb83b6ff44429447fc7dc5fa5921"
-    }
+WIDGET = {
+  CONFIG: {
+    "modules": "012",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": "12",
+    "cityColor": "FFFFFF",
+    "citySize": "12",
+    "aqiSize": "12",
+    "weatherIconSize": "15",
+    "alertIconSize": "15",
+    "padding": "5px 5px 5px 5px",
+    "shadow": "1",
+    "language": "zh",
+    "borderRadius": 5,
+    "fixed": "true",
+    "vertical": "middle",
+    "horizontal": "center",
+    "right": "5",
+    "top": "5",
+    "key": "35ea9d0762314f69831a746970b58c5f"
   }
+}
 </script>
 <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-
 </html>
