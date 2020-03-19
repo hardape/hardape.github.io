@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   
   <meta name="renderer" content="webkit">
@@ -82,48 +83,48 @@ var _hmt = _hmt || [];
 
 <div class="overlay" style="background: #4d4d4d">
 	<!-- 《添加“心知天气”-->
-
+	
 	<!-- 《添加“心知天气”-->
 	<div id="tp-weather-widget"></div>
 	<script>
-			(function(T, h, i, n, k, P, a, g, e) {
-				g = function() {
-					P = h.createElement(i);
-					a = h.getElementsByTagName(i)[0];
-					P.src = k;
-					P.charset = "utf-8";
-					P.async = 1;
-					a.parentNode.insertBefore(P, a)
-				};
-				T["ThinkPageWeatherWidgetObject"] = n;
-				T[n] || (T[n] = function() {
-					(T[n].q = T[n].q || []).push(arguments)
-				});
-				T[n].l = +new Date();
-				if (T.attachEvent) {
-					T.attachEvent("onload", g)
-				} else {
-					T.addEventListener("load", g, false)
-				}
-			}(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
-		</script>
-		<script>
-			tpwidget("init", {
-				"flavor": "slim",
-				"location": "WM6N2PM3WY2K",
-				"geolocation": "enabled",
-				"language": "zh-chs",
-				"unit": "c",
-				"theme": "chameleon",
-				"container": "tp-weather-widget",
-				"bubble": "enabled",
-				"alarmType": "badge",
-				"color": "#FFFFFF",
-				"uid": "U88B4B2797",
-				"hash": "c9d7cb43b80ffece52c9a1ebbfbca65f"
+		(function (T, h, i, n, k, P, a, g, e) {
+			g = function () {
+				P = h.createElement(i);
+				a = h.getElementsByTagName(i)[0];
+				P.src = k;
+				P.charset = "utf-8";
+				P.async = 1;
+				a.parentNode.insertBefore(P, a)
+			};
+			T["ThinkPageWeatherWidgetObject"] = n;
+			T[n] || (T[n] = function () {
+				(T[n].q = T[n].q || []).push(arguments)
 			});
-			tpwidget("show");
-		</script>
+			T[n].l = +new Date();
+			if (T.attachEvent) {
+				T.attachEvent("onload", g)
+			} else {
+				T.addEventListener("load", g, false)
+			}
+		}(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
+	</script>
+	<script>
+		tpwidget("init", {
+			"flavor": "slim",
+			"location": "WM6N2PM3WY2K",
+			"geolocation": "enabled",
+			"language": "zh-chs",
+			"unit": "c",
+			"theme": "chameleon",
+			"container": "tp-weather-widget",
+			"bubble": "enabled",
+			"alarmType": "badge",
+			"color": "#FFFFFF",
+			"uid": "U88B4B2797",
+			"hash": "c9d7cb43b80ffece52c9a1ebbfbca65f"
+		});
+		tpwidget("show");
+	</script>
 	
 </div>
 <div class="intrude-less">
@@ -132,50 +133,173 @@ var _hmt = _hmt || [];
 			<img src="https://gitee.com/code-ape/blogImage/raw/master/img/head.gif" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">辛猿毅码</a></h1>
+			<h1 class="header-author"><a href="/">辛猿毅码</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">Talk is cheap.Show me the code.</p>
 		
 		
-<form id="search-form"> <!-- 搜索框相关 -->
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
-    <i class="fa fa-times" onclick="resetSearch()"></i> <!-- 清空/重置搜索框 -->
-</form>
-<div id="local-search-result"></div> <!-- 搜索结果区 -->
-<p class='no-result'>未找到相关结果</p> <!-- 无匹配时显示，注意请在 CSS 中设置默认隐藏 -->
-        
+		<form id="search-form">
+			<!-- 搜索框相关 -->
+			<input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..."
+				class="search form-control" autocomplete="off" autocorrect="off" />
+			<i class="fa fa-times" onclick="resetSearch()"></i> <!-- 清空/重置搜索框 -->
+		</form>
+		<div id="local-search-result"></div> <!-- 搜索结果区 -->
+		<p class='no-result'>未找到相关结果</p> <!-- 无匹配时显示，注意请在 CSS 中设置默认隐藏 -->
+		<script>
+			// A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
+			// Copyright (C) 2015 
+			// Joseph Pan <http://github.com/wzpan>
+			// Shuhao Mao <http://github.com/maoshuhao>
+			// Edited by MOxFIVE <http://github.com/MOxFIVE>
+			var searchFunc = function (path, search_id, content_id) {
+				'use strict';
+				$.ajax({
+					url: path,
+					dataType: "xml",
+					success: function (xmlResponse) {
+						// get the contents from search data
+						var datas = $("entry", xmlResponse).map(function () {
+							return {
+								title: $("title", this).text(),
+								content: $("content", this).text(),
+								url: $("url", this).text()
+							};
+						}).get();
+						var $input = document.getElementById(search_id);
+						var $resultContent = document.getElementById(content_id);
+						$input.addEventListener('input', function () {
+							var str = '<ul class=\"search-result-list\">';
+							var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+							$resultContent.innerHTML = "";
+							if (this.value.trim().length <= 0) {
+								return;
+							}
+							// perform local searching
+							datas.forEach(function (data) {
+								var isMatch = true;
+								var content_index = [];
+								var data_title = data.title.trim().toLowerCase();
+								var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+								var data_url = data.url;
+								var index_title = -1;
+								var index_content = -1;
+								var first_occur = -1;
+								// only match artiles with not empty titles and contents
+								if (data_title != '' && data_content != '') {
+									keywords.forEach(function (keyword, i) {
+										index_title = data_title.indexOf(keyword);
+										index_content = data_content.indexOf(keyword);
+										if (index_title < 0 && index_content < 0) {
+											isMatch = false;
+										} else {
+											if (index_content < 0) {
+												index_content = 0;
+											}
+											if (i == 0) {
+												first_occur = index_content;
+											}
+										}
+									});
+								}
+								// show search results
+								if (isMatch) {
+									str += "<li><a href='" + data_url + "' class='search-result-title' target='_self'>" + "> " + data_title + "</a>";
+									var content = data.content.trim().replace(/<[^>]+>/g, "");
+									if (first_occur >= 0) {
+										// cut out characters
+										var start = first_occur - 6;
+										var end = first_occur + 6;
+										if (start < 0) {
+											start = 0;
+										}
+										if (start == 0) {
+											end = 10;
+										}
+										if (end > content.length) {
+											end = content.length;
+										}
+										var match_content = content.substr(start, end);
+										// highlight all keywords
+										keywords.forEach(function (keyword) {
+											var regS = new RegExp(keyword, "gi");
+											match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+										});
+
+										str += "<p class=\"search-result\">" + match_content + "...</p>"
+									}
+								}
+							});
+							$resultContent.innerHTML = str;
+						});
+					}
+				});
+			}
+			var path = "/search.xml";
+			searchFunc(path, 'local-search-input', 'local-search-result');
+			var inputArea = document.querySelector("#local-search-input");
+			var getSearchFile = function () {
+				var path = "/search.xml";
+				searchFunc(path, 'local-search-input', 'local-search-result');
+			}
+
+			inputArea.onfocus = function () { getSearchFile() }
+			var $resetButton = $("#search-form .fa-times");
+			var $resultArea = $("#local-search-result");
+
+			inputArea.oninput = function () { $resetButton.show(); }
+			resetSearch = function () {
+				$resultArea.html("");
+				document.querySelector("#search-form").reset();
+				$resetButton.hide();
+				$(".no-result").hide();
+			}
+			inputArea.onkeydown = function () { if (event.keyCode == 13) return false }
+			$resultArea.bind("DOMNodeRemoved DOMNodeInserted", function (e) {
+				if (!$(e.target).text()) {
+					$(".no-result").show(200);
+				} else {
+					$(".no-result").hide();
+				}
+			})
+		</script>
+		
+		
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/archives/">归档</a></li>
-	        
+		<li><a href="/">主页</a></li>
+		
+		<li><a href="/archives/">归档</a></li>
+		
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
+		
+		<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+		
+		
+		
+		
+		
+		<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+		
+		
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i class="icon-bilibili"></i></a>
-		        
-					<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i class="icon-mail"></i></a>
-		        
+		<a class="github" target="_blank" href="https://github.com/hardcodeape" title="github"><i
+				class="icon-github"></i></a>
+		
+		<a class="bilibili" target="_blank" href="https://space.bilibili.com/291525419" title="bilibili"><i
+				class="icon-bilibili"></i></a>
+		
+		<a class="mail" target="_blank" href="mailto:1845593696@qq.com" title="mail"><i
+				class="icon-mail"></i></a>
+		
 			</div>
 			
 		</nav>
@@ -183,7 +307,6 @@ var _hmt = _hmt || [];
 	</header>		
 	
 </div>
-
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -907,15 +1030,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">移动端布局</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">流式布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1040,11 +1163,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-  <!-- 代码块复制功能 -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
-  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="/js/clipboard.js"></script>  -->
-  <script type="text/javascript" src="/js/clipboard_use.js"></script>
+ <!-- 代码块复制功能 -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+ <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="/js/clipboard.js"></script>  -->
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 <!-- 《添加折叠按钮脚本 -->
 <script>
