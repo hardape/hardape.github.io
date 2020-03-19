@@ -17,7 +17,7 @@ var o=function(e){if(e.BJ_REPORT)return e.BJ_REPORT;var t=[],n={},o={id:0,uin:0,
 // Joseph Pan <http://github.com/wzpan>
 // Shuhao Mao <http://github.com/maoshuhao>
 // Edited by MOxFIVE <http://github.com/MOxFIVE>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 var searchFunc = function(path, search_id, content_id) {
     'use strict';
     $.ajax({

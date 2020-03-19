@@ -6,10 +6,11 @@
         copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
         copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
         copyHtml += '</button>';
-        new ClipboardJS('.btn-copy', {
-            target: function(trigger) {
-                return trigger.nextElementSibling;
-            }
+        $(".highlight .code").before(copyHtml);
+             new ClipboardJS('.btn-copy', {
+                target: function(trigger) {
+                    return trigger.nextElementSibling;
+                }
         });
     }
     initCopyCode();
