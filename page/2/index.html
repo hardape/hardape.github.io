@@ -550,7 +550,7 @@ var _hmt = _hmt || [];
 		});
 	};
 	$(document).ready(load_valine);
-	$(document).pjax("a[href^='/']", {
+	$(document).pjax("a", {
 		container: '.body-wrap',
 		fragment: '.body-wrap',
 		show: 'fade',
@@ -560,10 +560,7 @@ var _hmt = _hmt || [];
 		load_valine();
 		// 重新加载不蒜子
 		$.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
-		//重新更新分享功能
-		$.getScript(/share.js);
 		$.getScript('/main.0cf68a.js');
-		console.log('sUrl='+ sUrl);
 		$.getScript('/slider.e37972.js');
 		$.getScript('/js/clipboard_use.js');
 		$.getScript('/mobile.992cbe.js');
@@ -689,7 +686,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </pre>
           </p>
           <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <a q-attr="href:path|urlformat" class="search-title" target="_self"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
             <p class="search-time">
               <i class="icon-calendar icon"></i>
               <span q-text="date|dateformat"></span>
