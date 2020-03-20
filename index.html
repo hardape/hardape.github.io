@@ -248,11 +248,9 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-			[ 总 文 章 数 ] : 6 篇
+			总文章数 : 6 篇 | 总字数 : <span class="post-count">2.9k 字</span>
 		</nav>
-		<nav class="header-smart-menu">
-			[ 总 字 数 ] : <span class="post-count">2.9k 字</span>
-		</nav>
+		
 		<nav class="header-smart-menu">
 			
 			
@@ -327,11 +325,8 @@ var _hmt = _hmt || [];
 			        
 				</div>
 			</nav>
-			<nav class="header-subtitle" >
-				[ 总 文 章 数 ] : 6 篇
-			</nav>
 			<nav class="header-subtitle">
-				[ 总 字 数 ] : <span class="post-count">2.9k 字</span>
+				总文章数 : 6 篇 | 总字数 : <span class="post-count">2.9k 字</span>
 			</nav>
 			<nav class="header-menu js-header-menu">
 				<ul style="width: 70%">
@@ -1069,7 +1064,13 @@ var _hmt = _hmt || [];
 		load_valine();
 		// 重新加载不蒜子
 		$.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
-		$.getScript('/slider.e37972.js')
+		//重新更新分享功能
+		$.getScript(/share.js);
+		$.getScript('/main.0cf68a.js');
+		console.log('sUrl='+ sUrl);
+		$.getScript('/slider.e37972.js');
+		$.getScript('/js/clipboard_use.js');
+		$.getScript('/mobile.992cbe.js');
 	})
 </script>
     </div>
