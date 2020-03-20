@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
   <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   
   <meta name="renderer" content="webkit">
@@ -74,7 +75,7 @@ var _hmt = _hmt || [];
     <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
     <script type="text/javascript" src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
-    <div class="aplayer" style="z-index=99999;opacity:0.8"data-id="455354804" data-server="netease" data-type="playlist" data-fixed="true" data-order="random" data-preload="none"></div>
+    <div class="aplayer" style="z-index:99999;opacity:0.8"data-id="455354804" data-server="netease" data-type="playlist" data-fixed="true" data-order="random" data-preload="none"></div>
     
 
   
@@ -681,16 +682,16 @@ var _hmt = _hmt || [];
 
 			</div>
 			
-				<!-- 不蒜子统计 -->
-				<span>
-					本站总访问量<span id="busuanzi_value_site_pv"></span>次
-				</span>
-				<span class="post-meta-divider">|</span>
-				<span>
-					本站访客数<span id="busuanzi_value_site_uv"></span>人
-				</span>
-				<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-				
+			<!-- 不蒜子统计 -->
+			<span>
+				本站总访问量<span id="busuanzi_value_site_pv"></span>次
+			</span>
+			<span class="post-meta-divider">|</span>
+			<span>
+				本站访客数<span id="busuanzi_value_site_uv"></span>人
+			</span>
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+			
 			<div class="footer-right">
 				<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 				<script>
@@ -712,10 +713,20 @@ var _hmt = _hmt || [];
 			</div>
 		</div>
 	</div>
-	
+
 </footer>
 <!--页面点击小红心-->
 <script type="text/javascript" src="/love.js"></script>
+<!-- pjax -->
+<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+<script>
+	$(document).pjax("a",{
+		container: '.mid-col',
+		fragment: '.mid-col',
+		show: 'fade',
+		timeout: 8000
+	})
+</script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -787,15 +798,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">视口</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二倍图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
