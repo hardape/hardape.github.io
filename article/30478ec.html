@@ -347,7 +347,6 @@ var _hmt = _hmt || [];
 	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
 </nav>
 
-      <div id="pjax-content">
       <div id="wrapper" class="body-wrap">
         <div class="menu-l">
           <div class="canvas-wrap">
@@ -497,7 +496,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
+        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
@@ -526,57 +525,6 @@ var _hmt = _hmt || [];
 
     
 
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://code-ape.gitee.io/article/30478ec.html" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
     
     <div class="clearfix"></div>
   </div>
@@ -653,7 +601,6 @@ var _hmt = _hmt || [];
 
 
           </div>
-        </div>
       </div>
       </div>
       <footer id="footer">
@@ -722,6 +669,7 @@ var _hmt = _hmt || [];
 		});
 	};
 	$(document).ready(load_valine);
+	
 	$(document).pjax("a[href^='/']", {
 		container: '#wrapper',
 		fragment: '#wrapper',
@@ -730,11 +678,16 @@ var _hmt = _hmt || [];
 		load_valine();
 		// 重新加载不蒜子
 		$.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
+		// 重新加载代码复制
 		$.getScript('/js/clipboard_use.js');
-		$.getScript('/mobile.992cbe.js');
-		// 其他标签点击
 		
-	})
+	}).on('pjax:send', function() {
+        $(".loading").css("display", "block");
+    }).on('pjax:complete', function() {
+        $(".loading").css("display", "none");
+    });
+
+
 </script>
     </div>
     <script>
@@ -761,7 +714,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
     
-<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+<!-- <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)"> -->
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" >
   <div class="tools-nav header-menu">
     
     
@@ -808,15 +762,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">视口</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二倍图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -948,6 +902,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     </div>
 
 </div>
+    <!-- pjax加载动画 -->
+    <div class="loading" style="display: none;"> <div id="loader"></div></div>
   </div>
   <!-- 代码块复制功能 -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
