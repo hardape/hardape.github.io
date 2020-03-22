@@ -81,6 +81,8 @@ var _hmt = _hmt || [];
 
 
   
+
+
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
@@ -353,6 +355,8 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+
+
   
   
     
@@ -360,12 +364,14 @@ var _hmt = _hmt || [];
       
       
       <section class="archives-wrap">
+        <div class="archives-title" > <i class="fa fa-bookmark" aria-hidden="true"></i> 词汇表 <span class="type"> 标签</span></div>
         <div class="archive-year-wrap">
           <a href="/archives/2020" class="archive-year">2020</a>
         </div>
         <div class="archives">
     
-    <article class="archive-article archive-type-post">
+    
+<article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
       	<div class="article-meta">
@@ -404,15 +410,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color5">学习笔记</a>
+        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color5">前端开发</a>
+        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color5">HTML</a>
+        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
         		</li>
       		
 		</ul>
@@ -483,6 +489,7 @@ var _hmt = _hmt || [];
 <!-- valine评论，详见https://deserts.io/diy-a-comment-system/ -->
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
 <script>
 	// < !--.comment要与评论区元素一致-->
 	var notify = 'true' == true ? true : false;
@@ -501,10 +508,11 @@ var _hmt = _hmt || [];
 		});
 	};
 	$(document).ready(load_valine);
-	
+
 	$(document).pjax("a[href^='/']", {
 		container: '#wrapper',
 		fragment: '#wrapper',
+		timeout: 10000,
 	}).on('pjax:complete', function () {
 		//加载Valine评论
 		load_valine();
@@ -512,12 +520,12 @@ var _hmt = _hmt || [];
 		$.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
 		// 重新加载代码复制
 		$.getScript('/js/clipboard_use.js');
-		
-	}).on('pjax:send', function() {
-        $(".loading").css("display", "block");
-    }).on('pjax:complete', function() {
-        $(".loading").css("display", "none");
-    });
+
+	}).on('pjax:send', function () {
+		$(".loading").css("display", "block");
+	}).on('pjax:complete', function () {
+		$(".loading").css("display", "none");
+	});
 
 
 </script>

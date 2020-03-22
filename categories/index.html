@@ -81,6 +81,8 @@ var _hmt = _hmt || [];
 
 
   
+
+
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
@@ -417,6 +419,7 @@ var _hmt = _hmt || [];
 <!-- valine评论，详见https://deserts.io/diy-a-comment-system/ -->
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
 <script>
 	// < !--.comment要与评论区元素一致-->
 	var notify = 'true' == true ? true : false;
@@ -435,10 +438,11 @@ var _hmt = _hmt || [];
 		});
 	};
 	$(document).ready(load_valine);
-	
+
 	$(document).pjax("a[href^='/']", {
 		container: '#wrapper',
 		fragment: '#wrapper',
+		timeout: 10000,
 	}).on('pjax:complete', function () {
 		//加载Valine评论
 		load_valine();
@@ -446,12 +450,12 @@ var _hmt = _hmt || [];
 		$.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
 		// 重新加载代码复制
 		$.getScript('/js/clipboard_use.js');
-		
-	}).on('pjax:send', function() {
-        $(".loading").css("display", "block");
-    }).on('pjax:complete', function() {
-        $(".loading").css("display", "none");
-    });
+
+	}).on('pjax:send', function () {
+		$(".loading").css("display", "block");
+	}).on('pjax:complete', function () {
+		$(".loading").css("display", "none");
+	});
 
 
 </script>
