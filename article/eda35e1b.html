@@ -252,7 +252,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-			总文章数 : 6 篇 | 总字数 : <span class="post-count">2.9k 字</span>
+			总文章数 : 6 篇 | 总字数 : <span class="post-count">4.6k 字</span>
 		</nav>
 		
 		<nav class="header-smart-menu">
@@ -330,7 +330,7 @@ var _hmt = _hmt || [];
 				</div>
 			</nav>
 			<nav class="header-subtitle">
-				总文章数 : 6 篇 | 总字数 : <span class="post-count">2.9k 字</span>
+				总文章数 : 6 篇 | 总字数 : <span class="post-count">4.6k 字</span>
 			</nav>
 			<nav class="header-menu js-header-menu">
 				<ul style="width: 70%">
@@ -742,12 +742,12 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   <div class="tools-wrap">
     
     	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+        <div class="search-wrap" q-on="click:stop(e)">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find #tag or title…">
           <i class="icon-search icon" q-show="search|isEmptyStr"></i>
           <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
         </div>
-        <div class="widget tagcloud search-tag">
+        <div class="widget tagcloud search-tag" q-on="click:stop(e)">
           <p class="search-tag-wording">tag:</p>
           <label class="search-switch">
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
@@ -759,19 +759,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">二倍图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">词汇表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">viewport</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">二倍图</a>
               </li>
             
             <div class="clearfix"></div>
