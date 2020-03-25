@@ -12,21 +12,25 @@
   <link rel="dns-prefetch" href="https://code-ape.gitee.io">
 
 
-  <title>02-移动端布局-流式布局 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>hexo博客yilia主题下复制代码块功能添加 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="『 注 : 本笔记摘自视频 2019移动端页面布局开发-流式布局 ，如有侵权,请联系删除。』">
+  <meta name="description" content="十分感谢 hexo+yilia添加复制代码块的功能 这篇文章给我的基本思路和代码，本文在其代码的基础上进行修改优化，先来看实现效果:   样式一:      样式二:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="02-移动端布局-流式布局">
-<meta property="og:url" content="https://code-ape.gitee.io/article/3fab69a3.html">
+<meta property="og:title" content="hexo博客yilia主题下复制代码块功能添加">
+<meta property="og:url" content="https://code-ape.gitee.io/article/5bc9f198.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="『 注 : 本笔记摘自视频 2019移动端页面布局开发-流式布局 ，如有侵权,请联系删除。』">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/GIF.gif">
-<meta property="article:published_time" content="2020-03-23T12:29:03.000Z">
-<meta property="article:modified_time" content="2020-03-24T04:26:22.512Z">
+<meta property="og:description" content="十分感谢 hexo+yilia添加复制代码块的功能 这篇文章给我的基本思路和代码，本文在其代码的基础上进行修改优化，先来看实现效果:   样式一:      样式二:">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/copy-code2.gif">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/copy-code.gif">
+<meta property="article:published_time" content="2020-03-25T13:29:38.000Z">
+<meta property="article:modified_time" content="2020-03-25T14:45:59.956Z">
 <meta property="article:author" content="辛猿毅码">
-<meta property="article:tag" content="流式布局">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="yilia">
+<meta property="article:tag" content="clipboard">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/GIF.gif">
+<meta name="twitter:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/copy-code2.gif">
   
   <link rel="alternative" href="/atom.xml" title="辛猿毅码(^∇^*)欢迎来到我的个人博客♪" type="application/atom+xml">
   
@@ -364,14 +368,14 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-02-移动端布局-流式布局" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hexo博客yilia主题下复制代码块功能添加" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      02-移动端布局-流式布局
+      hexo博客yilia主题下复制代码块功能添加
     </h1>
   
 
@@ -382,8 +386,8 @@ var _hmt = _hmt || [];
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/article/3fab69a3.html" class="archive-article-date">
-  	<time datetime="2020-03-23T12:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
+<a href="/article/5bc9f198.html" class="archive-article-date">
+  	<time datetime="2020-03-25T13:29:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-25</time>
 </a>
   <!-- 开始添加字数统计-->
   
@@ -392,7 +396,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">328字</span>
+        <span class="post-count">910字</span>
       </span>
     </span>
 
@@ -401,7 +405,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">≈1分钟</span>
+        <span class="post-count">≈4分钟</span>
       </span>
     </span>
 </div>
@@ -419,7 +423,7 @@ var _hmt = _hmt || [];
     <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
     <div class="toc-scroll">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#案例"><span class="toc-number">3.</span> <span class="toc-text">案例</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理-amp-工具"><span class="toc-number">1.</span> <span class="toc-text">原理&amp;工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现步骤"><span class="toc-number">2.</span> <span class="toc-text">实现步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建实现复制功能的js"><span class="toc-number">2.1.</span> <span class="toc-text">新建实现复制功能的js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#步骤"><span class="toc-number">2.1.1.</span> <span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码说明"><span class="toc-number">2.1.2.</span> <span class="toc-text">代码说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入jQuery和clipboard"><span class="toc-number">2.2.</span> <span class="toc-text">引入jQuery和clipboard</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加样式"><span class="toc-number">2.3.</span> <span class="toc-text">添加样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#样式一"><span class="toc-number">2.3.1.</span> <span class="toc-text">样式一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#样式二"><span class="toc-number">2.3.2.</span> <span class="toc-text">样式二</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
   <script type="text/javascript">
@@ -441,23 +445,39 @@ var _hmt = _hmt || [];
   <div class="article-entry" itemprop="articleBody">
     
     <blockquote>
-<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.ixigua.com/pseries/6748767874967405069/" target="_blank" rel="noopener">2019移动端页面布局开发-流式布局</a> ，如有侵权,请联系删除。』</em></p>
+<p>  十分感谢 <a href="https://www.yansheng.xyz/article/e9d1b881.html" target="_blank" rel="noopener">hexo+yilia添加复制代码块的功能</a> 这篇文章给我的基本思路和代码，本文在其代码的基础上进行修改优化，先来看实现效果:</p>
+<p>  样式一:</p>
+<p>  <img src="https://gitee.com/code-ape/blogImage/raw/master/img/copy-code2.gif" alt="copy-code2"></p>
+<p>  样式二:</p>
+<p>  <img src="https://gitee.com/code-ape/blogImage/raw/master/img/copy-code.gif" alt="copy-code"></p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
-<li>流式布局，就是<strong>百分比布局</strong>，也称为<strong>非固定像素布局</strong>。</li>
-<li>通过盒子的宽度设置成<strong>百分比</strong>来根据屏幕的宽度来进行伸缩，不受固定像素的限制，内容向两侧填充。</li>
-<li>流式布局方式是移动web开发使用的比较常见的布局方式。</li>
-</ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在使用流式(百分比)布局时，通常通过设置父盒子的<strong>最大宽度</strong>(<code>max-width</code>)和<strong>最小宽度</strong>(<code>min-width</code>)来限制父盒子的伸缩范围</p>
-<ul>
-<li><code>max-width</code>  最大宽度 （<code>max-height</code>  最大高度)</li>
-<li><code>min-width</code>  最小宽度   (<code>min-height</code>  最小高度)</li>
-</ul>
-<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;移动端布局-流式布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">            <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">section</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">            <span class="attribute">max-width</span>: <span class="number">980px</span>;</span><br><span class="line">            <span class="attribute">min-width</span>: <span class="number">320px</span>;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">section</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">section</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">section</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span><br><span class="line">            <span class="attribute">background-color</span>: pink;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">section</span>&gt;</span><br><span class="line">        &lt;div&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="原理-amp-工具"><a href="#原理-amp-工具" class="headerlink" title="原理&amp;工具"></a>原理&amp;工具</h2><p>使用clipboard.js工具，在文章加载完成后在每一个代码块(类名为<code>highlight</code>的<code>figure</code>标签)添加复制代码块按钮，clipboard的具体使用请参考<a href="http://www.clipboardjs.cn/" target="_blank" rel="noopener">clipboard中文网</a>。</p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><h3 id="新建实现复制功能的js"><a href="#新建实现复制功能的js" class="headerlink" title="新建实现复制功能的js"></a>新建实现复制功能的js</h3><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>在<code>hexo</code>的根目录下的<code>themes\yilia\source\js</code>中新建<code>clipboard.js</code>如下:</p>
+<blockquote>
+<p>   注意 : 按钮中的字体图标需引入<code>Font Awesome</code>图标库，详见<a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener"><em>Font</em> <em>Awesome</em> 中文网</a></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".highlight"</span>).wrap(<span class="string">"&lt;div class='code-wrapper' style='position:relative'&gt;&lt;/div&gt;"</span>);</span><br><span class="line"><span class="comment">/*页面载入完成后，创建复制按钮*/</span></span><br><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">e, t, a</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* code */</span></span><br><span class="line">    <span class="keyword">var</span> initCopyCode = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> copyHtml = <span class="string">''</span>;</span><br><span class="line">        copyHtml += <span class="string">'&lt;button class="btn-copy" data-clipboard-snippet=""&gt;'</span>;</span><br><span class="line">        copyHtml += <span class="string">'  &lt;i class="fa fa-clipboard"&gt;&lt;/i&gt;&lt;span&gt;复制&lt;/span&gt;'</span>;</span><br><span class="line">        copyHtml += <span class="string">'&lt;/button&gt;'</span>;</span><br><span class="line">        $(<span class="string">".highlight .code"</span>).before(copyHtml);</span><br><span class="line">        <span class="keyword">var</span> clipboard = <span class="keyword">new</span> ClipboardJS(<span class="string">'.btn-copy'</span>, &#123;</span><br><span class="line">            target: <span class="function"><span class="keyword">function</span> (<span class="params">trigger</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> trigger.nextElementSibling;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        clipboard.on(<span class="string">'success'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            e.trigger.innerHTML = <span class="string">"&lt;i class='fa fa-clipboard'&gt;&lt;/i&gt;&lt;span&gt;复制成功&lt;/span&gt;"</span></span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                e.trigger.innerHTML = <span class="string">"&lt;i class='fa fa-clipboard'&gt;&lt;/i&gt;&lt;span&gt;复制&lt;/span&gt;"</span></span><br><span class="line">            &#125;, <span class="number">1000</span>)</span><br><span class="line">           </span><br><span class="line">            e.clearSelection();</span><br><span class="line">        &#125;);</span><br><span class="line">        clipboard.on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            e.trigger.innerHTML = <span class="string">"&lt;i class='fa fa-clipboard'&gt;&lt;/i&gt;&lt;span&gt;复制失败&lt;/span&gt;"</span></span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                e.trigger.innerHTML = <span class="string">"&lt;i class='fa fa-clipboard'&gt;&lt;/i&gt;&lt;span&gt;复制&lt;/span&gt;"</span></span><br><span class="line">            &#125;, <span class="number">1000</span>)</span><br><span class="line">            e.clearSelection();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    initCopyCode();</span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
 
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/GIF.gif" alt="GIF" style="zoom: 33%;" />
+<h4 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h4><ol>
+<li>因为css的”子绝父相”在父元素有滚动条的情况下子元素会跟随父元素滚动，所以使用 <a href="https://www.yansheng.xyz/article/e9d1b881.html" target="_blank" rel="noopener">hexo+yilia添加复制代码块的功能</a> 的代码会有代码块超出时出现“bug”的情况，解决方案是使用js动态给代码块元素添加父元素(相对定位)作为复制按钮子元素的定位参照父元素，而代码块元素则起到滚动元素的作用。即上文代码中的第一行代码。</li>
+<li>clipboard提供了复制成功/失败(success/error)后的自定义事件触发，故可以通过这两个方法修改按钮文字，再通过<code>setTimeout()</code>方法在复制1s后再次显示“复制“</li>
+</ol>
+<h3 id="引入jQuery和clipboard"><a href="#引入jQuery和clipboard" class="headerlink" title="引入jQuery和clipboard"></a>引入jQuery和clipboard</h3><p>在<code>hexo</code>的根目录下的<code>themes\yilia\layout\layout.ejs</code>文件的<code>&lt;/body&gt;</code>前引入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 代码块复制功能 --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src="</span>https:<span class="comment">//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/clipboard_use.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="添加样式"><a href="#添加样式" class="headerlink" title="添加样式"></a>添加样式</h3><p>修改<code>hexo</code>的根目录下的<code>themes\yilia\source\main.0cf68a.css</code>，在末尾添加下面代码</p>
+<p>（最好是<code>pre .css~* .id, pre .id</code>下面，即代码块样式附近）</p>
+<h4 id="样式一"><a href="#样式一" class="headerlink" title="样式一"></a>样式一</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">btn-copy</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(#fcfcfc, #eee);</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#d5d5d5</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">-webkit-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-moz-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-ms-user-select</span>: none;</span><br><span class="line">    <span class="attribute">user-select</span>: none;</span><br><span class="line">    <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">13px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: opacity .<span class="number">3s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">-o-transition</span>: opacity .<span class="number">3s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">transition</span>: opacity .<span class="number">3s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn-copy</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">5px</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.code-wrapper</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.btn-copy</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="样式二"><a href="#样式二" class="headerlink" title="样式二"></a>样式二</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn-copy</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#515151</span>;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">    <span class="attribute">-webkit-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-moz-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-ms-user-select</span>: none;</span><br><span class="line">    <span class="attribute">user-select</span>: none;</span><br><span class="line">    <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">13px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#d5d5d5</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: opacity .<span class="number">3s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">-o-transition</span>: opacity .<span class="number">3s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">transition</span>: opacity .<span class="number">3s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn-copy</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">5px</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.code-wrapper</span> <span class="selector-class">.btn-copy</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
 
 
     
@@ -468,7 +488,30 @@ var _hmt = _hmt || [];
 
 <!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
 
-  <div class="declare" hidden="hidden"></div>
+  <div class="declare">
+    <strong class="author">本文作者：</strong>
+    
+      辛猿毅码
+    
+    <br>
+    <strong class="create-time">发布时间：</strong>
+    2020-03-25
+    <br>
+    <strong class="update-time">最后更新：</strong>
+    2020-03-25
+    <br>
+    <strong class="article-titles">本文标题：</strong>
+    <a href="https://code-ape.gitee.io/article/5bc9f198.html" title="hexo博客yilia主题下复制代码块功能添加" target="_blank">hexo博客yilia主题下复制代码块功能添加</a>
+    <br>
+    <strong class="article-url">本文链接：</strong>
+    <a href="https://code-ape.gitee.io/article/5bc9f198.html" title="hexo博客yilia主题下复制代码块功能添加" target="_blank">https://code-ape.gitee.io/article/5bc9f198.html</a>
+    <br>
+    <strong class="copyright">版权声明：</strong>
+    本作品采用
+    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议">CC BY-NC-SA 4.0</a>
+    许可协议进行许可。转载请注明出处！
+    
+  </div>
 
 <!-- 添加版权声明》 -->
     
@@ -509,13 +552,30 @@ var _hmt = _hmt || [];
   </div>
   <div class="article-info article-info-index">
     
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link colortop">置顶</a>
+    </div>
+    
     
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/tags/流式布局/" class="article-tag-list-link color5">流式布局</a>
+        			<a href="/tags/blog/" class="article-tag-list-link color5">blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/tags/hexo/" class="article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/tags/yilia/" class="article-tag-list-link color1">yilia</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/tags/clipboard/" class="article-tag-list-link color5">clipboard</a>
         		</li>
       		
 		</ul>
@@ -527,15 +587,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
+        			<a href="/categories/博客成长记/" class="article-tag-list-link color1">博客成长记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color3">移动端</a>
+        			<a href="/categories/博客成长记/hexo博客/" class="article-tag-list-link color2">hexo博客</a>
         		</li>
       		
 		</ul>
@@ -554,18 +610,9 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/article/858d7cad.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          06-HTML的列表标签&amp;图片标签
-        
-      </div>
-    </a>
   
-  
-    <a href="/article/e7935f0.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">01-移动端Web开发-基础</div>
+    <a href="/article/2181ac59.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">07-HTML的超链接&amp;锚点标签</div>
       <i class="icon-circle-right"></i>
     </a>
   
