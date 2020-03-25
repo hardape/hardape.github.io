@@ -12,16 +12,18 @@
   <link rel="dns-prefetch" href="https://code-ape.gitee.io">
 
 
-  <title>Archives | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>07-HTML的超链接&amp;锚点标签 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个90后的技术博客，目前用于记录学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:url" content="https://code-ape.gitee.io/archives/index.html">
+  <meta name="description" content="『 注 : 本笔记摘自视频 尚学堂-网页开发和设计教程全解 ，如有侵权,请联系删除。』">
+<meta property="og:type" content="article">
+<meta property="og:title" content="07-HTML的超链接&amp;锚点标签">
+<meta property="og:url" content="https://code-ape.gitee.io/article/2181ac59.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="一个90后的技术博客，目前用于记录学习笔记">
+<meta property="og:description" content="『 注 : 本笔记摘自视频 尚学堂-网页开发和设计教程全解 ，如有侵权,请联系删除。』">
+<meta property="article:published_time" content="2020-03-25T08:52:46.000Z">
+<meta property="article:modified_time" content="2020-03-25T09:10:59.213Z">
 <meta property="article:author" content="辛猿毅码">
-<meta property="article:tag" content="笔记 代码 博客">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
   
   <link rel="alternative" href="/atom.xml" title="辛猿毅码(^∇^*)欢迎来到我的个人博客♪" type="application/atom+xml">
@@ -360,48 +362,167 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
+            <article id="post-07-HTML的超链接&amp;锚点标签" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      07-HTML的超链接&amp;锚点标签
+    </h1>
+  
 
   
-  <div class="archives-title" > <i class="fa fa-bookmark" aria-hidden="true"></i> 归档 <span class="type"> </span></div>
   
-    
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020</a>
-        </div>
-       
-        <div class="archives">
-    
-    
-      <div class="archive-month-wrap">
-        <a href="/archives/2020/03" class="archive-year"> 「 03月 」</a>
-      </div>
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+	<!-- 不蒜子统计 -->
+	<span  class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
 <a href="/article/2181ac59.html" class="archive-article-date">
   	<time datetime="2020-03-25T08:52:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-25</time>
 </a>
-        </div>
-    	 
+  <!-- 开始添加字数统计-->
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/2181ac59.html">07-HTML的超链接&amp;锚点标签</a>
-    </h1>
-  
+  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">530字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
-          
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">≈1分钟</span>
+      </span>
+    </span>
+</div>
+  
+  
+  </header>
+  
+  <!-- 目录内容 -->
+  
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();">
+    <i class="fa fa-compass" aria-hidden="true"></i>
+    <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#超链接标签"><span class="toc-number">1.</span> <span class="toc-text">超链接标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#属性"><span class="toc-number">1.1.</span> <span class="toc-text">属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#href：要跳转的网资源路径"><span class="toc-number">1.1.1.</span> <span class="toc-text">href：要跳转的网资源路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#title-超链接标题"><span class="toc-number">1.1.2.</span> <span class="toc-text">title:超链接标题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#target-指明要跳转的网页资源的显示位置"><span class="toc-number">1.1.3.</span> <span class="toc-text">target:指明要跳转的网页资源的显示位置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-number">1.2.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#锚点学习"><span class="toc-number">2.</span> <span class="toc-text">锚点学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#作用"><span class="toc-number">2.1.</span> <span class="toc-text">作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用"><span class="toc-number">2.2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意-1"><span class="toc-number">2.3.</span> <span class="toc-text">注意</span></a></li></ol></li></ol>
+  </div>
+  <script type="text/javascript">
+    function showToc() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:block");
+      show_toc_btn.setAttribute("style", "display:none");
+    };
+    function showBtn() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:none");
+      show_toc_btn.setAttribute("style", "display:block");
+    };
+  </script>
+  
+  <!-- 目录内容结束 -->
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.bilibili.com/video/av47490356" target="_blank" rel="noopener">尚学堂-网页开发和设计教程全解</a> ，如有侵权,请联系删除。』</em></p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">title</span>=<span class="string">"百度一下"</span> <span class="attr">target</span>=<span class="string">"_search"</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h4 id="href：要跳转的网资源路径"><a href="#href：要跳转的网资源路径" class="headerlink" title="href：要跳转的网资源路径"></a><code>href</code>：要跳转的网资源路径</h4><ul>
+<li>本地资源:(内部链接、下载链接、网页元素链接)<br>绝对路径<br>相对路径</li>
+<li>网络资源:(外部链接)<br>网络资源(网页)的URL<h4 id="title-超链接标题"><a href="#title-超链接标题" class="headerlink" title="title:超链接标题"></a><code>title</code>:超链接标题</h4>鼠标放在超链接上的时候显示<h4 id="target-指明要跳转的网页资源的显示位置"><a href="#target-指明要跳转的网页资源的显示位置" class="headerlink" title="target:指明要跳转的网页资源的显示位置"></a><code>target</code>:指明要跳转的网页资源的显示位置</h4><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_blank</td>
+<td>在新的标签页中显示，浏览器会另开一个新窗口显示链接</td>
+</tr>
+<tr>
+<td>_self</td>
+<td>在当前页中刷新显示，在同一框架或窗口中打开所链接的文档。(默认值)</td>
+</tr>
+<tr>
+<td>_parent</td>
+<td>在父级页面中显示,将链接的文件载入含有该链接框架的父框架集或父窗口中。如果含有该链接的框架不是嵌套的，则在浏览器全屏窗口中载入链接的文件，就象_self参数一样。</td>
+</tr>
+<tr>
+<td>_top</td>
+<td>在顶层页面中显示,在当前的整个浏览器窗口中打开所链接的文档，因而会删除所有框架</td>
+</tr>
+<tr>
+<td>_search</td>
+<td>在浏览器的搜索区装载文档，注意，这个功能只在Internet Explorer 5 或者更高版本中适用。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>超链接标签中一定要声明访问方式，访问方式可以是文字也可以是图片</p>
+<h2 id="锚点学习"><a href="#锚点学习" class="headerlink" title="锚点学习"></a>锚点学习</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>在一张网页中进行资源跳转</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>1.先使用超链接标签在指定的网页位置增加锚点.格式:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"锚点名"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或先在页面中需要设置锚点的标签添加id属性.格式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">标签名</span> <span class="attr">id</span>=<span class="string">"锚点名"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2.使用a标签可以跳转指定的锚点，达到网页内部资源跳转的目的，格式:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#锚点名"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>#表示刷新本页面,可用来返回本页首(空链接)</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:;" class="page-reward-btn tooltip-top">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -413,7 +534,7 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -434,576 +555,83 @@ var _hmt = _hmt || [];
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
   
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/dc081184.html" class="archive-article-date">
-  	<time datetime="2020-03-24T03:33:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
-</a>
+  
+    <a href="/article/dc081184.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">03-流式布局-仿京东案例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/dc081184.html">03-流式布局-仿京东案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/流式布局/" class="article-tag-list-link color5">流式布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color3">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/858d7cad.html" class="archive-article-date">
-  	<time datetime="2020-03-23T13:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/858d7cad.html">06-HTML的列表标签&amp;图片标签</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/3fab69a3.html" class="archive-article-date">
-  	<time datetime="2020-03-23T12:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/3fab69a3.html">02-移动端布局-流式布局</a>
-    </h1>
-  
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/流式布局/" class="article-tag-list-link color5">流式布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color3">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div class="comment"></div> 
+</section>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/e7935f0.html" class="archive-article-date">
-  	<time datetime="2020-03-16T05:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/e7935f0.html">01-移动端Web开发-基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/viewport/" class="article-tag-list-link color4">viewport</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/二倍图/" class="article-tag-list-link color4">二倍图</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color3">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/d1478627.html" class="archive-article-date">
-  	<time datetime="2020-03-15T12:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/d1478627.html">05-HTML的文本标签</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/30478ec.html" class="archive-article-date">
-  	<time datetime="2020-03-15T12:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/30478ec.html">04-HTML的head标签</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/1b16d537.html" class="archive-article-date">
-  	<time datetime="2020-03-15T11:42:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/1b16d537.html">03-HTML的注释&amp;标准文档结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/59ca2a15.html" class="archive-article-date">
-  	<time datetime="2020-03-15T11:36:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/59ca2a15.html">02-HTML的标签英文全称及描述</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/词汇表/" class="article-tag-list-link color4">词汇表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/eda35e1b.html" class="archive-article-date">
-  	<time datetime="2020-03-15T10:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/eda35e1b.html">01-HTML的概念&amp;三大基石</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
-
+<script>
+   $("#wrapper img").each(function () {
+      // $(this).attr("data-fancybox", "gallery"); 直接给img添加data-fancybox会导致点击图片后图片消失
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      $(this).wrap(element);
+    });
+</script>
           </div>
       </div>
       </div>
@@ -1100,8 +728,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
