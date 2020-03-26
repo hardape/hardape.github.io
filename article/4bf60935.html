@@ -12,17 +12,28 @@
   <link rel="dns-prefetch" href="https://code-ape.gitee.io">
 
 
-  <title>Category: 前端开发 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>04-移动端布局-flex布局 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个90后的技术博客，目前用于记录学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:url" content="https://code-ape.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/page/2/index.html">
+  <meta name="description" content="『 注 : 本笔记摘自视频 2019移动端页面布局开发-flex布局 ，如有侵权,请联系删除。』">
+<meta property="og:type" content="article">
+<meta property="og:title" content="04-移动端布局-flex布局">
+<meta property="og:url" content="https://code-ape.gitee.io/article/4bf60935.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="一个90后的技术博客，目前用于记录学习笔记">
+<meta property="og:description" content="『 注 : 本笔记摘自视频 2019移动端页面布局开发-flex布局 ，如有侵权,请联系删除。』">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326154113129.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326155138631.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326162915739.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326165842982.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326201411102.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326203206446.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326205215403.png">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326212816800.png">
+<meta property="article:published_time" content="2020-03-26T07:23:34.000Z">
+<meta property="article:modified_time" content="2020-03-26T13:43:38.837Z">
 <meta property="article:author" content="辛猿毅码">
-<meta property="article:tag" content="笔记 代码 博客">
+<meta property="article:tag" content="flex布局">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326154113129.png">
   
   <link rel="alternative" href="/atom.xml" title="辛猿毅码(^∇^*)欢迎来到我的个人博客♪" type="application/atom+xml">
   
@@ -360,64 +371,397 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-
+            <article id="post-04-移动端布局-flex布局" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
-  <div class="archives-title" > <i class="fa fa-bookmark" aria-hidden="true"></i> 学习笔记 &gt; 前端开发 &gt; page &gt; 2 <span class="type"> 分类</span></div>
   
-    
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020</a>
-        </div>
-       
-        <div class="archives">
-    
-    
-      <div class="archive-month-wrap">
-        <a href="/archives/2020/03" class="archive-year"> 「 03月 」</a>
-      </div>
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/59ca2a15.html" class="archive-article-date">
-  	<time datetime="2020-03-15T11:36:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/59ca2a15.html">02-HTML的标签英文全称及描述</a>
+    <h1 class="article-title" itemprop="name">
+      04-移动端布局-flex布局
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+  
+  
+	<!-- 不蒜子统计 -->
+	<span  class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/article/4bf60935.html" class="archive-article-date">
+  	<time datetime="2020-03-26T07:23:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-26</time>
+</a>
+  <!-- 开始添加字数统计-->
+  
+  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">3.5k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">≈18分钟</span>
+      </span>
+    </span>
+</div>
+  
+  
+  </header>
+  
+  <!-- 目录内容 -->
+  
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();">
+    <i class="fa fa-compass" aria-hidden="true"></i>
+    <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+    <div class="toc-scroll">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#传统布局和flex布局的比较"><span class="toc-number">1.</span> <span class="toc-text">传统布局和flex布局的比较</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传统布局"><span class="toc-number">1.1.</span> <span class="toc-text">传统布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex弹性布局"><span class="toc-number">1.2.</span> <span class="toc-text">flex弹性布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建议"><span class="toc-number">1.3.</span> <span class="toc-text">建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex布局原理"><span class="toc-number">2.</span> <span class="toc-text">flex布局原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number">2.1.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-number">2.2.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">2.3.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#父项常见属性"><span class="toc-number">3.</span> <span class="toc-text">父项常见属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主轴与侧轴"><span class="toc-number">3.1.</span> <span class="toc-text">主轴与侧轴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-direction-设置主轴的方向"><span class="toc-number">3.2.</span> <span class="toc-text">flex-direction 设置主轴的方向</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见属性值"><span class="toc-number">3.2.1.</span> <span class="toc-text">常见属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试"><span class="toc-number">3.2.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#justify-content-设置主轴上的子元素排列方式"><span class="toc-number">3.3.</span> <span class="toc-text">justify-content 设置主轴上的子元素排列方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见属性值-1"><span class="toc-number">3.3.1.</span> <span class="toc-text">常见属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试-主轴为x轴"><span class="toc-number">3.3.2.</span> <span class="toc-text">测试(主轴为x轴)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-wrap设置子元素是否换行"><span class="toc-number">3.4.</span> <span class="toc-text">flex-wrap设置子元素是否换行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见属性值-2"><span class="toc-number">3.4.1.</span> <span class="toc-text">常见属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试-1"><span class="toc-number">3.4.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-items-设置侧轴上的子元素排列方式-单行"><span class="toc-number">3.5.</span> <span class="toc-text">align-items 设置侧轴上的子元素排列方式(单行)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见属性值-3"><span class="toc-number">3.5.1.</span> <span class="toc-text">常见属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试-2"><span class="toc-number">3.5.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-content设置侧轴上的子元素的排列方式-多行"><span class="toc-number">3.6.</span> <span class="toc-text">align-content设置侧轴上的子元素的排列方式(多行)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见属性值-4"><span class="toc-number">3.6.1.</span> <span class="toc-text">常见属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试-3"><span class="toc-number">3.6.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-flow"><span class="toc-number">3.7.</span> <span class="toc-text">flex-flow</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子项常见属性"><span class="toc-number">4.</span> <span class="toc-text">子项常见属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-子项目占的份数"><span class="toc-number">4.1.</span> <span class="toc-text">flex 子项目占的份数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法"><span class="toc-number">4.1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试-4"><span class="toc-number">4.1.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-self控制子项自己在侧轴上的排列方式"><span class="toc-number">4.2.</span> <span class="toc-text">align-self控制子项自己在侧轴上的排列方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#order定义项目的排列顺序"><span class="toc-number">4.3.</span> <span class="toc-text">order定义项目的排列顺序</span></a></li></ol></li></ol>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function showToc() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:block");
+      show_toc_btn.setAttribute("style", "display:none");
+    };
+    function showBtn() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:none");
+      show_toc_btn.setAttribute("style", "display:block");
+    };
+  </script>
+  
+  <!-- 目录内容结束 -->
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.ixigua.com/pseries/6749020438375956999/" target="_blank" rel="noopener">2019移动端页面布局开发-flex布局</a> ，如有侵权,请联系删除。』</em></p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="传统布局和flex布局的比较"><a href="#传统布局和flex布局的比较" class="headerlink" title="传统布局和flex布局的比较"></a>传统布局和flex布局的比较</h2><h3 id="传统布局"><a href="#传统布局" class="headerlink" title="传统布局"></a>传统布局</h3><ul>
+<li>兼容性好</li>
+<li>布局繁琐</li>
+<li>有局限性，在移动端不能很好地进行布局</li>
+</ul>
+<h3 id="flex弹性布局"><a href="#flex弹性布局" class="headerlink" title="flex弹性布局"></a>flex弹性布局</h3><ul>
+<li>操作方便，布局极为简单，移动端应用广泛</li>
+<li>PC端浏览器支持情况较差</li>
+<li>IE 11或更低版本的浏览器不支持或仅部分支持</li>
+</ul>
+<h3 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h3><ol>
+<li>如果是PC端页面布局，使用传统布局</li>
+<li>如果是移动端或不考虑兼容性问题的PC端页面布局，可使用flex弹性布局</li>
+</ol>
+<h2 id="flex布局原理"><a href="#flex布局原理" class="headerlink" title="flex布局原理"></a>flex布局原理</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>flex 是 <strong>flexib Box</strong> 的缩写，意为”<strong>弹性布局</strong>“，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为flex布局</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>当我们为父盒子设为flex布局以后，子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</li>
+<li>伸缩布局 = 弹性布局 = 伸缩盒布局 = 弹性盒布局 = flex布局</li>
+<li>采用flex布局的元素，称为<strong>flex容器(flex container)</strong>，简称”<strong>容器</strong>“。它的所有子元素自动成为容器成员，称为<strong>flex项目(flex item)</strong>，简称<strong>“项目”</strong>。</li>
+<li>子项目即使是行内元素设置宽高也有效。</li>
+</ul>
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326154113129.png" alt="image-20200326154113129" style="zoom: 40%;" />
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>flex布局原理就是通过给父盒子添加<code>display:flex</code>，来控制盒子的位置和排列方式。</strong></p>
+<h2 id="父项常见属性"><a href="#父项常见属性" class="headerlink" title="父项常见属性"></a>父项常见属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>flex-direction</code></td>
+<td>设置主轴的方向</td>
+</tr>
+<tr>
+<td><code>justify-content</code></td>
+<td>设置主轴上的子元素排列方式</td>
+</tr>
+<tr>
+<td><code>flex-wrap</code></td>
+<td>设置子元素是否换行</td>
+</tr>
+<tr>
+<td><code>align-items</code></td>
+<td>设置侧轴上的子元素的排列方式(单行)</td>
+</tr>
+<tr>
+<td><code>align-content</code></td>
+<td>设置侧轴上的子元素的排列方式(多行)</td>
+</tr>
+<tr>
+<td><code>flex-flow</code></td>
+<td>复合属性，相当于同时设置了<code>flex-direction</code>和<code>flex-wrap</code></td>
+</tr>
+</tbody></table>
+<h3 id="主轴与侧轴"><a href="#主轴与侧轴" class="headerlink" title="主轴与侧轴"></a>主轴与侧轴</h3><p>在flex布局中，是分为主轴和侧轴两个方向，同样的叫法有：行和列、x轴和y轴</p>
+<ul>
+<li>默认主轴方向就是x轴方向，水平向右</li>
+<li>默认侧轴方向就是y轴方向，垂直向下</li>
+</ul>
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326155138631.png" alt="image-20200326155138631" style="zoom: 67%;" />
+
+<p>注意：主轴和侧轴是会变化的，就看<code>flex-direction</code>设置谁为主轴，剩下的就是侧轴，而子元素是跟着主轴来排列的</p>
+<h3 id="flex-direction-设置主轴的方向"><a href="#flex-direction-设置主轴的方向" class="headerlink" title="flex-direction 设置主轴的方向"></a>flex-direction 设置主轴的方向</h3><p>flex-direction 属性决定主轴的方向(<strong>即项目的排列方向</strong>)</p>
+<h4 id="常见属性值"><a href="#常见属性值" class="headerlink" title="常见属性值"></a>常见属性值</h4><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>row</code></td>
+<td>从左到右(默认)</td>
+</tr>
+<tr>
+<td><code>row-reverse</code></td>
+<td>从右到左</td>
+</tr>
+<tr>
+<td><code>column</code></td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td><code>column-reverse</code></td>
+<td>从下到上</td>
+</tr>
+</tbody></table>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;flex布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-class">.test</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> &#123;</span><br><span class="line">            <span class="attribute">display</span>: flex;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.row</span> &#123;</span><br><span class="line">            <span class="attribute">flex-direction</span>: row;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.row-reverse</span> &#123;</span><br><span class="line">            <span class="attribute">flex-direction</span>: row-reverse;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.column</span> &#123;</span><br><span class="line">            <span class="attribute">flex-direction</span>: column;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.column-reverse</span> &#123;</span><br><span class="line">            <span class="attribute">flex-direction</span>: column-reverse;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: snow;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: blue;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;h2&gt;flex-direction属性&lt;/h2&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;row&lt;/h3&gt;</span><br><span class="line">        &lt;div class="row container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;row-reverse&lt;/h3&gt;</span><br><span class="line">        &lt;div class="row-reverse container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;column&lt;/h3&gt;</span><br><span class="line">        &lt;div class="column container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;column-reverse&lt;/h3&gt;</span><br><span class="line">        &lt;div class="column-reverse container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326162915739.png" alt="image-20200326162915739" style="zoom: 80%;" />
+
+<h3 id="justify-content-设置主轴上的子元素排列方式"><a href="#justify-content-设置主轴上的子元素排列方式" class="headerlink" title="justify-content 设置主轴上的子元素排列方式"></a>justify-content 设置主轴上的子元素排列方式</h3><p>justify-content 属性定义了项目在主轴上的对齐方式</p>
+<p><strong>注意：使用这个属性之前一定要确定好主轴的方向</strong></p>
+<h4 id="常见属性值-1"><a href="#常见属性值-1" class="headerlink" title="常见属性值"></a>常见属性值</h4><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>flex-start</code></td>
+<td>从头部开始排列(默认值)</td>
+</tr>
+<tr>
+<td><code>flex-end</code></td>
+<td>从尾部开始排列</td>
+</tr>
+<tr>
+<td><code>center</code></td>
+<td>从主轴居中对齐</td>
+</tr>
+<tr>
+<td><code>space-around</code></td>
+<td>平分剩余空间</td>
+</tr>
+<tr>
+<td><code>space-between</code></td>
+<td>先两边贴边，再平分剩余空间</td>
+</tr>
+</tbody></table>
+<h4 id="测试-主轴为x轴"><a href="#测试-主轴为x轴" class="headerlink" title="测试(主轴为x轴)"></a>测试(主轴为x轴)</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;flex布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-class">.test</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> &#123;</span><br><span class="line">            <span class="attribute">display</span>: flex;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">250px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: snow;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.flex-start</span> &#123;</span><br><span class="line">            <span class="attribute">justify-content</span>: flex-start;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.flex-end</span> &#123;</span><br><span class="line">            <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.center</span> &#123;</span><br><span class="line">            <span class="attribute">justify-content</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.space-around</span> &#123;</span><br><span class="line">            <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.space-between</span> &#123;</span><br><span class="line">            <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;h2&gt;justify-content属性(主轴为x正轴)&lt;/h2&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;flex-start&lt;/h3&gt;</span><br><span class="line">        &lt;div class="flex-start container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;flex-end&lt;/h3&gt;</span><br><span class="line">        &lt;div class="flex-end container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;center&lt;/h3&gt;</span><br><span class="line">        &lt;div class="center container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;space-around&lt;/h3&gt;</span><br><span class="line">        &lt;div class="space-around container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;space-between&lt;/h3&gt;</span><br><span class="line">        &lt;div class="space-between container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326165842982.png" alt="image-20200326165842982" style="zoom: 80%;" />
+
+<h3 id="flex-wrap设置子元素是否换行"><a href="#flex-wrap设置子元素是否换行" class="headerlink" title="flex-wrap设置子元素是否换行"></a>flex-wrap设置子元素是否换行</h3><p>默认情况下，项目都排在一条线(又称”轴线”)上。<code>flex-wrap</code>属性定义，flex布局中默认是不换行的。</p>
+<h4 id="常见属性值-2"><a href="#常见属性值-2" class="headerlink" title="常见属性值"></a>常见属性值</h4><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nowrap</code></td>
+<td>不换行(默认值)</td>
+</tr>
+<tr>
+<td><code>wrap</code></td>
+<td>换行</td>
+</tr>
+</tbody></table>
+<h4 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;flex布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-class">.test</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> &#123;</span><br><span class="line">            <span class="attribute">display</span>: flex;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">250px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: snow;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.nowrap</span> &#123;</span><br><span class="line">            <span class="attribute">flex-wrap</span>: nowrap;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.wrap</span> &#123;</span><br><span class="line">            <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;h2&gt;flex-wrap属性&lt;/h2&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;nowrap&lt;/h3&gt;</span><br><span class="line">        &lt;div class="nowrap container"&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;wrap&lt;/h3&gt;</span><br><span class="line">        &lt;div class="wrap container"&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326201411102.png" alt="image-20200326201411102" style="zoom:67%;" />
+
+<h3 id="align-items-设置侧轴上的子元素排列方式-单行"><a href="#align-items-设置侧轴上的子元素排列方式-单行" class="headerlink" title="align-items 设置侧轴上的子元素排列方式(单行)"></a>align-items 设置侧轴上的子元素排列方式(单行)</h3><p>该属性是控制子项在侧轴上的排列方式，在子项为单项(单行)的时候使用</p>
+<h4 id="常见属性值-3"><a href="#常见属性值-3" class="headerlink" title="常见属性值"></a>常见属性值</h4><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td>center</td>
+<td>挤在一起居中，即垂直居中</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>拉伸(默认值)</td>
+</tr>
+</tbody></table>
+<h4 id="测试-2"><a href="#测试-2" class="headerlink" title="测试"></a>测试</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;flex布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-class">.test</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> &#123;</span><br><span class="line">            <span class="attribute">display</span>: flex;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">250px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: snow;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="comment">/* height: 50px; */</span></span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.flex-start</span> &#123;</span><br><span class="line">            <span class="attribute">align-items</span>: flex-start;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.flex-end</span> &#123;</span><br><span class="line">            <span class="attribute">align-items</span>: flex-end;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.center</span> &#123;</span><br><span class="line">            <span class="attribute">align-items</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.stretch</span> &#123;</span><br><span class="line">            <span class="attribute">align-items</span>: stretch;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;h2&gt;align-items属性&lt;/h2&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;flex-start&lt;/h3&gt;</span><br><span class="line">        &lt;div class="flex-start container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;flex-end&lt;/h3&gt;</span><br><span class="line">        &lt;div class="flex-end container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;center&lt;/h3&gt;</span><br><span class="line">        &lt;div class="center container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;stretch(项目不设置height时)&lt;/h3&gt;</span><br><span class="line">        &lt;div class="stretch container"&gt;</span><br><span class="line">            &lt;span&gt;item1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;item3&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326203206446.png" alt="image-20200326203206446" style="zoom:67%;" />
+
+<h3 id="align-content设置侧轴上的子元素的排列方式-多行"><a href="#align-content设置侧轴上的子元素的排列方式-多行" class="headerlink" title="align-content设置侧轴上的子元素的排列方式(多行)"></a>align-content设置侧轴上的子元素的排列方式(多行)</h3><p>设置子项在侧轴上的子元素的排列方式，并且只能用于子项出现<strong>换行</strong>的情况(多行)，<strong>在单行下是没有效果的。</strong></p>
+<h4 id="常见属性值-4"><a href="#常见属性值-4" class="headerlink" title="常见属性值"></a>常见属性值</h4><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>flex-start</code></td>
+<td>在侧轴的头部开始排列</td>
+</tr>
+<tr>
+<td><code>flex-end</code></td>
+<td>在侧轴的尾部开始排列</td>
+</tr>
+<tr>
+<td><code>center</code></td>
+<td>在侧轴的中间显示</td>
+</tr>
+<tr>
+<td><code>space-around</code></td>
+<td>子项在侧轴平分剩余空间</td>
+</tr>
+<tr>
+<td><code>space-between</code></td>
+<td>子项在侧轴先分布在两头，再平分剩余空间</td>
+</tr>
+<tr>
+<td><code>stretch</code></td>
+<td>设置子项元素高度平分父元素高度(默认值)</td>
+</tr>
+</tbody></table>
+<h4 id="测试-3"><a href="#测试-3" class="headerlink" title="测试"></a>测试</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;flex布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-class">.test</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> &#123;</span><br><span class="line">            <span class="attribute">display</span>: flex;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">            <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: snow;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="comment">/* height: 50px; */</span></span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.height50</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.flex-start</span> &#123;</span><br><span class="line">            <span class="attribute">align-content</span>: flex-start;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.flex-end</span> &#123;</span><br><span class="line">            <span class="attribute">align-content</span>: flex-end;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.center</span> &#123;</span><br><span class="line">           <span class="attribute">align-content</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.space-around</span> &#123;</span><br><span class="line">            <span class="attribute">align-content</span>: space-around;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.space-between</span> &#123;</span><br><span class="line">            <span class="attribute">align-content</span>: space-between;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.stretch</span> &#123;</span><br><span class="line">            <span class="attribute">align-content</span>: stretch;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">	&lt;h2&gt;align-content属性&lt;/h2&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;flex-start&lt;/h3&gt;</span><br><span class="line">        &lt;div class="flex-start container"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;flex-end&lt;/h3&gt;</span><br><span class="line">        &lt;div class="flex-end container"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;center&lt;/h3&gt;</span><br><span class="line">        &lt;div class="center container"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;space-around&lt;/h3&gt;</span><br><span class="line">        &lt;div class="space-around container"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;space-between&lt;/h3&gt;</span><br><span class="line">        &lt;div class="space-between container"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;stretch(项目设置height时)&lt;/h3&gt;</span><br><span class="line">        &lt;div class="stretch container height50"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;h3&gt;stretch(项目不设置height时)&lt;/h3&gt;</span><br><span class="line">        &lt;div class="stretch container"&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;5&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;6&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326205215403.png" alt="image-20200326205215403" style="zoom:67%;" />
+
+<h3 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h3><p><code>flex-flow</code>属性是<code>flex-direction</code>和<code>flex-wrap</code>属性的复合属性，例子如下</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-flow</span>: <span class="selector-tag">row</span> <span class="selector-tag">wrap</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="子项常见属性"><a href="#子项常见属性" class="headerlink" title="子项常见属性"></a>子项常见属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>flex</code></td>
+<td>子项目占的份数</td>
+</tr>
+<tr>
+<td><code>align-self</code></td>
+<td>控制子项自己在侧轴上的排列方式</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>定义子项的排列顺序(前后顺序)</td>
+</tr>
+</tbody></table>
+<h3 id="flex-子项目占的份数"><a href="#flex-子项目占的份数" class="headerlink" title="flex 子项目占的份数"></a>flex 子项目占的份数</h3><p>flex属性定义子项目分配<strong>剩余空间</strong>，用flex来表示占多少<strong>份数</strong>，默认值为0，故当子项目不设置宽度/高度时，子项目设置<code>flex: 1</code>，即可完成子项目均分父容器宽度/高度的效果。</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex</span>: &lt;<span class="selector-tag">number</span>&gt;; <span class="comment">/* default 0 */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="测试-4"><a href="#测试-4" class="headerlink" title="测试"></a>测试</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">    &lt;title&gt;flex布局&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-class">.test</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.container</span> &#123;</span><br><span class="line">            <span class="attribute">display</span>: flex;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">            <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: snow;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: blue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.flex1</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.flex2</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span><br><span class="line">            <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.flex2</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span><br><span class="line">            <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.flex2</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span><br><span class="line">            <span class="attribute">flex</span>: <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;h2&gt;flex属性&lt;/h2&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;div class="flex1 height50 container"&gt;</span><br><span class="line">            &lt;span&gt;flex:1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;flex:1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;flex:1&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class="test"&gt;</span><br><span class="line">        &lt;div class="flex2 height50 container"&gt;</span><br><span class="line">            &lt;span&gt;flex:1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;flex:2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;flex:1&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200326212816800.png" alt="image-20200326212816800" style="zoom:67%;" />
+
+<h3 id="align-self控制子项自己在侧轴上的排列方式"><a href="#align-self控制子项自己在侧轴上的排列方式" class="headerlink" title="align-self控制子项自己在侧轴上的排列方式"></a>align-self控制子项自己在侧轴上的排列方式</h3><p><code>align-self</code>属性运行单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性，其常用属性值有<strong><code>flex-start</code>、<code>flex-end</code>、<code>center</code>、<code>stretch</code>、<code>auto</code></strong>，默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。</p>
+<h3 id="order定义项目的排列顺序"><a href="#order定义项目的排列顺序" class="headerlink" title="order定义项目的排列顺序"></a>order定义项目的排列顺序</h3><p>order属性定义项目的排列顺序，<strong>数值越小，排列越靠前</strong>，默认为<code>0</code></p>
+<p>注意:和<code>z-index</code>不一样</p>
+
+    
+    <!-- 《添加版权声明 -->
+    
+      <!-- 《添加版权声明 -->
+<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 添加版权声明》 -->
+    
+    <!-- 添加版权声明》 -->
+    
+    <div class="page-reward">
+      <a href="javascript:;" class="page-reward-btn tooltip-top">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/词汇表/" class="article-tag-list-link color4">词汇表</a>
+        			<a href="/tags/flex布局/" class="article-tag-list-link color2">flex布局</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -431,89 +775,91 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
+        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color3">移动端</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    
+
+    
+
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
   
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/eda35e1b.html" class="archive-article-date">
-  	<time datetime="2020-03-15T10:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
+  
+    <a href="/article/9a1c0754.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">08-HTML的表格标签</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/eda35e1b.html">01-HTML的概念&amp;三大基石</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color2">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color3">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">&lt;&lt; Prev</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div class="comment"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $("#wrapper img").each(function () {
+    // $(this).attr("data-fancybox", "gallery"); 直接给img添加data-fancybox会导致点击图片后图片消失
+    var element = document.createElement("a");
+    $(element).attr("data-fancybox", "gallery");
+    $(element).attr("href", $(this).attr("src"));
+    $(this).wrap(element);
+  });
+</script>
 
 
           </div>
@@ -612,10 +958,10 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
 		root: "/",
