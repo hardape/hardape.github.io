@@ -12,17 +12,21 @@
   <link rel="dns-prefetch" href="https://code-ape.gitee.io">
 
 
-  <title>Tag: 查阅 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>01-初识JavaScript | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个90后的技术博客，目前用于记录学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:url" content="https://code-ape.gitee.io/tags/%E6%9F%A5%E9%98%85/index.html">
+  <meta name="description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』">
+<meta property="og:type" content="article">
+<meta property="og:title" content="01-初识JavaScript">
+<meta property="og:url" content="https://code-ape.gitee.io/article/cd89632a.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="一个90后的技术博客，目前用于记录学习笔记">
+<meta property="og:description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』">
+<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200402164825875.png">
+<meta property="article:published_time" content="2020-04-03T04:46:25.000Z">
+<meta property="article:modified_time" content="2020-04-03T04:51:36.954Z">
 <meta property="article:author" content="辛猿毅码">
-<meta property="article:tag" content="笔记 代码 博客">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200402164825875.png">
   
   <link rel="alternative" href="/atom.xml" title="辛猿毅码(^∇^*)欢迎来到我的个人博客♪" type="application/atom+xml">
   
@@ -360,64 +364,237 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-
+            <article id="post-01-初识JavaScript" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
-  <div class="archives-title" > <i class="fa fa-bookmark" aria-hidden="true"></i> 查阅 <span class="type"> 标签</span></div>
   
-    
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020</a>
-        </div>
-       
-        <div class="archives">
-    
-    
-      <div class="archive-month-wrap">
-        <a href="/archives/2020/03" class="archive-year"> 「 03月 」</a>
-      </div>
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/59ca2a15.html" class="archive-article-date">
-  	<time datetime="2020-03-15T11:36:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/59ca2a15.html">02-HTML的全称表&amp;推荐查阅</a>
+    <h1 class="article-title" itemprop="name">
+      01-初识JavaScript
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+  
+  
+	<!-- 不蒜子统计 -->
+	<span  class="archive-article-date">
+		<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/article/cd89632a.html" class="archive-article-date">
+  	<time datetime="2020-04-03T04:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
+</a>
+  <!-- 开始添加字数统计-->
+  
+  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.1k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">≈4分钟</span>
+      </span>
+    </span>
+</div>
+  
+  
+  </header>
+  
+  <!-- 目录内容 -->
+  
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();">
+    <i class="fa fa-compass" aria-hidden="true"></i>
+    <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+    <div class="toc-scroll">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript简介"><span class="toc-number">1.</span> <span class="toc-text">JavaScript简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript历史"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript是什么"><span class="toc-number">1.2.</span> <span class="toc-text">JavaScript是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript的作用"><span class="toc-number">1.3.</span> <span class="toc-text">JavaScript的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器执行JS简介"><span class="toc-number">2.</span> <span class="toc-text">浏览器执行JS简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS的组成"><span class="toc-number">3.</span> <span class="toc-text">JS的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ECMAScript"><span class="toc-number">3.1.</span> <span class="toc-text">ECMAScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM"><span class="toc-number">3.2.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BOM"><span class="toc-number">3.3.</span> <span class="toc-text">BOM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS三种书写位置"><span class="toc-number">4.</span> <span class="toc-text">JS三种书写位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内式JS"><span class="toc-number">4.1.</span> <span class="toc-text">行内式JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内嵌式JS"><span class="toc-number">4.2.</span> <span class="toc-text">内嵌式JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外部JS文件"><span class="toc-number">4.3.</span> <span class="toc-text">外部JS文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS的注释"><span class="toc-number">5.</span> <span class="toc-text">JS的注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单行注释"><span class="toc-number">5.1.</span> <span class="toc-text">单行注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行注释"><span class="toc-number">5.2.</span> <span class="toc-text">多行注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS输入输出语句"><span class="toc-number">6.</span> <span class="toc-text">JS输入输出语句</span></a></li></ol>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function showToc() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:block");
+      show_toc_btn.setAttribute("style", "display:none");
+    };
+    function showBtn() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:none");
+      show_toc_btn.setAttribute("style", "display:block");
+    };
+  </script>
+  
+  <!-- 目录内容结束 -->
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.bilibili.com/video/av56979800" target="_blank" rel="noopener">JavaScript基础</a>，如有侵权,请联系删除。』</em></p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h2><h3 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h3><ul>
+<li>发明者：布兰登·艾奇(Brendan Eich，1961~ )。</li>
+<li>他在1995年利用10天完成JavaScript设计。</li>
+<li>他最初在网景公司合作，将该语言命名为LiveScript，后来在与Sun公司合作之后将其改名为JavaScript。</li>
+</ul>
+<h3 id="JavaScript是什么"><a href="#JavaScript是什么" class="headerlink" title="JavaScript是什么"></a>JavaScript是什么</h3><ul>
+<li>JavaScript是世界上最流行的语言之一，是一种运行在客户端的脚本语言(Script即脚本的意思)</li>
+<li>脚本语言：不需要编译，运行过程中由js解释器(js引擎)<strong>逐行</strong>来进行解释并执行</li>
+<li>现在也可以基于Node.js技术进行服务器端编程</li>
+<li>JavaScript简称为<strong>JS</strong>，JS为解释型语言</li>
+</ul>
+<h3 id="JavaScript的作用"><a href="#JavaScript的作用" class="headerlink" title="JavaScript的作用"></a>JavaScript的作用</h3><ul>
+<li>表单动态校验(密码强度检测) → JS产生的最初目的</li>
+<li>网页特效</li>
+<li>服务端开发( Node.js )</li>
+<li>桌面程序( Electron )</li>
+<li>App( Cordova )</li>
+<li>控制硬件-物联网( Ruff )</li>
+<li>游戏开发( cocos2d-js )</li>
+</ul>
+<h2 id="浏览器执行JS简介"><a href="#浏览器执行JS简介" class="headerlink" title="浏览器执行JS简介"></a>浏览器执行JS简介</h2><p>浏览器分成两部分 → <strong>渲染引擎</strong> 和 <strong>JS引擎</strong> </p>
+<ul>
+<li><strong>渲染引擎</strong> ：用来解析HTML和CSS，俗称<strong>内核</strong>，比如Chrome浏览器的blink，老版本的webkit</li>
+<li><strong>JS引擎</strong>：也称为JS解释器。用来读取网页中的JavaScript代码，对其处理后运行，比如Chrome浏览器的V8</li>
+</ul>
+<p>浏览器本身并不会执行JS代码，而是通过内置JavaScript引擎(解释器)来执行JS代码，JS引擎执行黛眉山时逐行解释每一句源码(转换为机器语言)，然后由计算机去执行，所以JavaScript语言归为脚本语言，会逐行解释执行。</p>
+<h2 id="JS的组成"><a href="#JS的组成" class="headerlink" title="JS的组成"></a>JS的组成</h2><p>JS由三部分组成，分别是<strong>ECMAScript ( JavaScript语法) **、</strong>DOM ( 页面文档对象类型 ) <strong>、</strong>BOM ( 浏览器对象模型 )**</p>
+<h3 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h3><p><strong>ECMAScript</strong>是由ECMA国际(原欧洲计算机制造商协会)进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为<strong>JavaScript</strong>或<strong>JScript</strong>，但实际上后两者是ECMAScript语言的实现和扩展。</p>
+<p><img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200402164825875.png" alt="image-20200402164825875"></p>
+<p>ECMAScript规定了JS的<strong>编程语法</strong>和<strong>基础核心知识</strong>，是所有浏览器厂商共同遵守的一套JS语法工业标准</p>
+<p>更多参考MDN：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview</a></p>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p><strong>DOM——文档对象模型(Document Object Model)</strong>是W3C推荐的处理可扩展标记语言的标准编程接口，通过DOM提供的接口可以对页面上的各种元素进行操作(大小、位置、颜色等)</p>
+<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><p><strong>BOM——浏览器对象模型(Browser Object Model)</strong>提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。通过BOM可以操作浏览器窗口，比如弹出框、控制浏览器跳转、获取分辨率等。</p>
+<h2 id="JS三种书写位置"><a href="#JS三种书写位置" class="headerlink" title="JS三种书写位置"></a>JS三种书写位置</h2><p>JS有3种书写位置，分别为<strong>行内</strong>、<strong>内嵌</strong>和<strong>外部</strong> </p>
+<h3 id="行内式JS"><a href="#行内式JS" class="headerlink" title="行内式JS"></a>行内式JS</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 唐伯虎点秋香 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"唐伯虎"</span> <span class="attr">onclick</span>=<span class="string">"alert('秋香')"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以将单行或少量JS代码写在HTML标签的事件属性中(以on开头的属性)，如<code>onclick</code>；</li>
+<li>注意单双引号的使用：<strong>在HTML中推荐使用双引号，在JS中推荐使用单引号</strong>；</li>
+<li>可读性差，在HTML中编写大量JS代码时，不方便阅读；</li>
+<li>引号易错，引号多层嵌套匹配时，非常容易弄混；</li>
+<li>特殊情况下使用</li>
+</ul>
+<h3 id="内嵌式JS"><a href="#内嵌式JS" class="headerlink" title="内嵌式JS"></a>内嵌式JS</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    alert(<span class="string">"唐伯虎点秋香"</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以将多行JS代码写到<code>&lt;script&gt;</code>标签中</li>
+<li>内嵌JS是学习是常用的方式</li>
+</ul>
+<h3 id="外部JS文件"><a href="#外部JS文件" class="headerlink" title="外部JS文件"></a>外部JS文件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">scr</span>=<span class="string">"my.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利于HTML页面代码结构化，把大段JS代码独立到HTML页面之外，既美观，又方便文件级别的复用</li>
+<li>引用外部JS文件的<code>script</code>标签中不可以写代码</li>
+<li>适合于JS代码量比较大的情况</li>
+</ul>
+<h2 id="JS的注释"><a href="#JS的注释" class="headerlink" title="JS的注释"></a>JS的注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我是单行注释</span></span><br></pre></td></tr></table></figure>
+
+<p>在VSCode中单行注释的快捷键为【<strong>ctrl + /</strong>】</p>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    我是多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>在VSCode中多行注释的快捷键为【<strong>shift + alt + A</strong>】，建议修改为【<strong>ctrl + shift + /</strong>】</p>
+<h2 id="JS输入输出语句"><a href="#JS输入输出语句" class="headerlink" title="JS输入输出语句"></a>JS输入输出语句</h2><p>为了方便信息的输入输入，JS中提供了一些输入输出语句，其常用的语句如下:</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>归属</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>alert(msg)</code></td>
+<td>浏览器弹出警示框</td>
+<td>浏览器</td>
+</tr>
+<tr>
+<td><code>console.log(msg)</code></td>
+<td>浏览器控制台打印输出信息</td>
+<td>浏览器</td>
+</tr>
+<tr>
+<td><code>prompt(info)</code></td>
+<td>浏览器弹出输入框，用户可以输入</td>
+<td>浏览器</td>
+</tr>
+</tbody></table>
+
+    
+    <!-- 《添加版权声明 -->
+    
+      <!-- 《添加版权声明 -->
+<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 添加版权声明》 -->
+    
+    <!-- 添加版权声明》 -->
+    
+    <div class="page-reward">
+      <a href="javascript:;" class="page-reward-btn tooltip-top">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/tags/HTML/" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/查阅/" class="article-tag-list-link color3">查阅</a>
+        			<a href="/tags/JavaScript/" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -431,24 +608,100 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/HTML/" class="article-tag-list-link color1">HTML</a>
+        			<a href="/categories/学习笔记/前端开发/JavaScript/" class="article-tag-list-link color5">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/article/c36156f0.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          02-JS的变量
+        
+      </div>
+    </a>
+  
+  
+    <a href="/article/a5fd5b4c.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">10-响应式布局-阿里百秀案例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div class="comment"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $("#wrapper img").each(function () {
+    // $(this).attr("data-fancybox", "gallery"); 直接给img添加data-fancybox会导致点击图片后图片消失
+    var element = document.createElement("a");
+    $(element).attr("data-fancybox", "gallery");
+    $(element).attr("href", $(this).attr("src"));
+    $(this).wrap(element);
+  });
+</script>
 
 
           </div>
@@ -547,9 +800,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
