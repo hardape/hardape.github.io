@@ -6,11 +6,3 @@
   border-left: 3px solid #ff1700;
   padding: .5em 1em; 
 }
-body {
-	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-filter: gray;}
