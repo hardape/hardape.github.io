@@ -12,27 +12,19 @@
   <link rel="dns-prefetch" href="https://code-ape.gitee.io">
 
 
-  <title>01-移动端Web开发-基础 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>06-JS的数组 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="『 注 : 本笔记摘自视频 2019移动端页面布局开发-流式布局 ，如有侵权,请联系删除。』">
+  <meta name="description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01-移动端Web开发-基础">
-<meta property="og:url" content="https://code-ape.gitee.io/article/e7935f0.html">
+<meta property="og:title" content="06-JS的数组">
+<meta property="og:url" content="https://code-ape.gitee.io/article/2425cb47.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="『 注 : 本笔记摘自视频 2019移动端页面布局开发-流式布局 ，如有侵权,请联系删除。』">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/brower.jpg">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200316210853506.png">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200322194626518.png">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200323140130668.png">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200323153544407.png">
-<meta property="og:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200323154347342.png">
-<meta property="article:published_time" content="2020-03-16T05:23:45.000Z">
-<meta property="article:modified_time" content="2020-04-01T15:29:45.973Z">
+<meta property="og:description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』">
+<meta property="article:published_time" content="2020-04-04T10:40:29.000Z">
+<meta property="article:modified_time" content="2020-04-04T11:06:38.500Z">
 <meta property="article:author" content="辛猿毅码">
-<meta property="article:tag" content="viewport">
-<meta property="article:tag" content="二倍图">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/code-ape/blogImage/raw/master/img/brower.jpg">
   
   <link rel="alternative" href="/atom.xml" title="辛猿毅码(^∇^*)欢迎来到我的个人博客♪" type="application/atom+xml">
   
@@ -370,14 +362,14 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-01-移动端Web开发-基础" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-06-JS的数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      01-移动端Web开发-基础
+      06-JS的数组
     </h1>
   
 
@@ -388,8 +380,8 @@ var _hmt = _hmt || [];
 		<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/article/e7935f0.html" class="archive-article-date">
-  	<time datetime="2020-03-16T05:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
+<a href="/article/2425cb47.html" class="archive-article-date">
+  	<time datetime="2020-04-04T10:40:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
 </a>
   <!-- 开始添加字数统计-->
   
@@ -398,7 +390,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2.4k字</span>
+        <span class="post-count">632字</span>
       </span>
     </span>
 
@@ -407,7 +399,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">≈10分钟</span>
+        <span class="post-count">≈2分钟</span>
       </span>
     </span>
 </div>
@@ -425,7 +417,7 @@ var _hmt = _hmt || [];
     <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
     <div class="toc-scroll">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器现状"><span class="toc-number">1.</span> <span class="toc-text">浏览器现状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PC端常见浏览器"><span class="toc-number">1.1.</span> <span class="toc-text">PC端常见浏览器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端常见浏览器"><span class="toc-number">1.2.</span> <span class="toc-text">移动端常见浏览器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-number">1.3.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.4.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手机屏幕现状"><span class="toc-number">2.</span> <span class="toc-text">手机屏幕现状</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见移动端屏幕尺寸"><span class="toc-number">3.</span> <span class="toc-text">常见移动端屏幕尺寸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端调试方法"><span class="toc-number">4.</span> <span class="toc-text">移动端调试方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视口"><span class="toc-number">5.</span> <span class="toc-text">视口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#布局视口"><span class="toc-number">5.1.</span> <span class="toc-text">布局视口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉视口"><span class="toc-number">5.2.</span> <span class="toc-text">视觉视口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#理想视口"><span class="toc-number">5.3.</span> <span class="toc-text">理想视口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#meta视口标签"><span class="toc-number">6.</span> <span class="toc-text">meta视口标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">6.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性"><span class="toc-number">6.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标准viewport设置"><span class="toc-number">6.3.</span> <span class="toc-text">标准viewport设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#物理像素-amp-物理像素比"><span class="toc-number">7.</span> <span class="toc-text">物理像素&amp;物理像素比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#物理像素-点"><span class="toc-number">7.1.</span> <span class="toc-text">物理像素(点)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#物理像素比"><span class="toc-number">7.2.</span> <span class="toc-text">物理像素比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意-1"><span class="toc-number">7.3.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发展"><span class="toc-number">7.4.</span> <span class="toc-text">发展</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二倍图"><span class="toc-number">8.</span> <span class="toc-text">二倍图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#多倍图"><span class="toc-number">8.1.</span> <span class="toc-text">多倍图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#背景缩放-CSS3新增"><span class="toc-number">8.2.</span> <span class="toc-text">背景缩放(CSS3新增)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法-1"><span class="toc-number">8.2.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#属性值"><span class="toc-number">8.2.2.</span> <span class="toc-text">属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#案例"><span class="toc-number">8.2.3.</span> <span class="toc-text">案例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多倍图切图-cutterman"><span class="toc-number">8.3.</span> <span class="toc-text">多倍图切图 cutterman</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端开发选择"><span class="toc-number">9.</span> <span class="toc-text">移动端开发选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单独制作移动端页面-主流"><span class="toc-number">9.1.</span> <span class="toc-text">单独制作移动端页面(主流)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#响应式兼容PC和移动端-其次"><span class="toc-number">9.2.</span> <span class="toc-text">响应式兼容PC和移动端(其次)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端技术解决方案"><span class="toc-number">10.</span> <span class="toc-text">移动端技术解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端浏览器"><span class="toc-number">10.1.</span> <span class="toc-text">移动端浏览器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS初始化"><span class="toc-number">10.2.</span> <span class="toc-text">CSS初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3-盒子模型"><span class="toc-number">10.3.</span> <span class="toc-text">CSS3 盒子模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊样式"><span class="toc-number">10.4.</span> <span class="toc-text">特殊样式</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组的概念"><span class="toc-number">1.</span> <span class="toc-text">数组的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建数组"><span class="toc-number">2.</span> <span class="toc-text">创建数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用new创建数组"><span class="toc-number">2.1.</span> <span class="toc-text">利用new创建数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用数组字面量创建数组"><span class="toc-number">2.2.</span> <span class="toc-text">利用数组字面量创建数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问数组"><span class="toc-number">3.</span> <span class="toc-text">访问数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的索引"><span class="toc-number">3.1.</span> <span class="toc-text">数组的索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的赋值和取值"><span class="toc-number">3.2.</span> <span class="toc-text">数组的赋值和取值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的赋值"><span class="toc-number">3.2.1.</span> <span class="toc-text">数组的赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的取值"><span class="toc-number">3.2.2.</span> <span class="toc-text">数组的取值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的length属性"><span class="toc-number">3.3.</span> <span class="toc-text">数组的length属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的遍历"><span class="toc-number">3.4.</span> <span class="toc-text">数组的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for循环遍历数组"><span class="toc-number">3.4.1.</span> <span class="toc-text">for循环遍历数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for-in循环遍历数组"><span class="toc-number">3.4.2.</span> <span class="toc-text">for-in循环遍历数组</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
   <script type="text/javascript">
@@ -447,361 +439,46 @@ var _hmt = _hmt || [];
   <div class="article-entry" itemprop="articleBody">
     
     <blockquote>
-<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.ixigua.com/pseries/6748767874967405069/" target="_blank" rel="noopener">2019移动端页面布局开发-流式布局</a> ，如有侵权,请联系删除。』</em></p>
+<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.bilibili.com/video/av56979800" target="_blank" rel="noopener">JavaScript基础</a>，如有侵权,请联系删除。』</em></p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="浏览器现状"><a href="#浏览器现状" class="headerlink" title="浏览器现状"></a>浏览器现状</h2><h3 id="PC端常见浏览器"><a href="#PC端常见浏览器" class="headerlink" title="PC端常见浏览器"></a>PC端常见浏览器</h3><p>360浏览器、谷歌浏览器、火狐浏览器、QQ浏览器、百度浏览器、搜狗浏览器、IE浏览器</p>
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/brower.jpg" alt="常见浏览器" style="zoom:50%;" />
+<h2 id="数组的概念"><a href="#数组的概念" class="headerlink" title="数组的概念"></a>数组的概念</h2><p>数组是指<strong>一组数据的集合</strong>，其中的每个数据被称作<strong>元素</strong>，在数组中可以<strong>存放任意类型的元素</strong>。数组是一种将<strong>一组数据存储在单个变量名下</strong>的优雅方式。</p>
+<h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><p>JS中创建数组有两种方式：<strong>利用new创建数组</strong>、<strong>利用数组字面量创建数组</strong></p>
+<h3 id="利用new创建数组"><a href="#利用new创建数组" class="headerlink" title="利用new创建数组"></a>利用new创建数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//创建一个新的空数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = <span class="keyword">new</span> <span class="built_in">Array</span>(length);<span class="comment">//创建一个长度为length的数组</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="移动端常见浏览器"><a href="#移动端常见浏览器" class="headerlink" title="移动端常见浏览器"></a>移动端常见浏览器</h3><p>UC浏览器、QQ浏览器、欧朋浏览器、百度手机浏览器、360安全浏览器、谷歌浏览器、搜狗手机浏览器、猎豹浏览器……</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>国内的UC和QQ、百度等手机浏览器都是根据Webkit修改过来的内核.</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>兼容移动端主流浏览器，处理<strong>Webkit</strong>内核浏览器即可.</p>
-<h2 id="手机屏幕现状"><a href="#手机屏幕现状" class="headerlink" title="手机屏幕现状"></a>手机屏幕现状</h2><ol>
-<li>移动端设备屏幕尺寸众多，碎片化严重</li>
-<li>Android设备有多种分辨率：480&times;800，480&times;854，540&times;960，720&times;1280，1080&times;1920等，还有2k，4k屏.</li>
-<li>今年来iPhone的碎片化也加剧了，其设备的主要分辨率有：640&times;960，640&times;1136，750&times;1334，1242&times;2208等.</li>
-<li>作为开发者无须关注这些分辨率，因为我们常用的尺寸单位是<code>px</code>.<h2 id="常见移动端屏幕尺寸"><a href="#常见移动端屏幕尺寸" class="headerlink" title="常见移动端屏幕尺寸"></a>常见移动端屏幕尺寸</h2></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>设备</th>
-<th>尺寸/英寸</th>
-<th>开发尺寸/px</th>
-<th>物理像素比/dpr</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>iphone3G</td>
-<td>3.5</td>
-<td>320&times;480</td>
-<td>1.0</td>
-</tr>
-<tr>
-<td>iphone4/4s</td>
-<td>3.5</td>
-<td>320&times;480</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>iphone5/5s/5c</td>
-<td>4.0</td>
-<td>320&times;568</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>HTC One M8</td>
-<td>4.5</td>
-<td>360&times;640</td>
-<td>3.0</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>4.7</td>
-<td>375&times;667</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>Nexus 4</td>
-<td>4.7</td>
-<td>384&times;640</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>Nexus 5x</td>
-<td>5.2</td>
-<td>411&times;731</td>
-<td>2.6</td>
-</tr>
-<tr>
-<td>iphone6 Plus</td>
-<td>5.5</td>
-<td>414&times;736</td>
-<td>3.0</td>
-</tr>
-<tr>
-<td>Samsung Galaxy Note 4</td>
-<td>5.7</td>
-<td>480&times;853</td>
-<td>3.0</td>
-</tr>
-<tr>
-<td>Sony Xperia Ultra</td>
-<td>6.4</td>
-<td>540&times;960</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>Nexus 7/12</td>
-<td>7.0</td>
-<td>600&times;960</td>
-<td>1.3</td>
-</tr>
-<tr>
-<td>iPad Mini</td>
-<td>7.9</td>
-<td>768&times;1024</td>
-<td>1.0</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>   注：以上数据均参照自 <a href="https://material.io/devices" target="_blank" rel="noopener">https://material.io/devices</a> </p>
-</blockquote>
-<h2 id="移动端调试方法"><a href="#移动端调试方法" class="headerlink" title="移动端调试方法"></a>移动端调试方法</h2><ol>
-<li>Chrome DevTools （谷歌浏览器）的模拟手机调试</li>
-<li>搭建本地Web服务器，手机和服务器一个局域网内，通过手机访问服务器</li>
-<li>使用外网服务器，直接ip或域名访问</li>
-</ol>
-<h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><blockquote>
-<p>  viewport</p>
-</blockquote>
-<p>视口是浏览器显示页面内容的屏幕区域。 视口可以分为<strong>布局视口</strong>、<strong>视觉视口</strong>和<strong>理想视口</strong>。</p>
-<h3 id="布局视口"><a href="#布局视口" class="headerlink" title="布局视口"></a>布局视口</h3><blockquote>
-<p>  layout viewport</p>
-</blockquote>
-<ol>
-<li>一般移动设备的浏览器都默认设置了一个布局视口，用于解决早期的PC端页面在手机上显示的问题。</li>
-<li>iOS, Android基本都将这个视口分辨率设置为980px，所以PC上的网页大多数都能在手机上呈现，只不过元素看上去很小，一般默认可以通过手动缩放页面，用户体验度差。</li>
-</ol>
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200316210853506.png" alt="布局视口" style="zoom:50%;" />
+<h3 id="利用数组字面量创建数组"><a href="#利用数组字面量创建数组" class="headerlink" title="利用数组字面量创建数组"></a>利用数组字面量创建数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.使用数组字面量方式创建空的数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="comment">// 2.使用数组字面量方式创建带初始值的数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="string">'淡黄的长裙'</span>,<span class="number">3.14</span>,<span class="literal">true</span>];</span><br></pre></td></tr></table></figure>
 
-<h3 id="视觉视口"><a href="#视觉视口" class="headerlink" title="视觉视口"></a>视觉视口</h3><blockquote>
-<p>  visual viewport</p>
-</blockquote>
-<ol>
-<li>视觉视口是指用户正在看到的<strong>网站的区域</strong>。</li>
-<li>用户可以通过缩放去操作视觉视口，但不会影响布局视口，布局视口仍然保持原来的宽度。</li>
-</ol>
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200322194626518.png" alt="视觉视口" style="zoom: 67%;" />
-
-<h3 id="理想视口"><a href="#理想视口" class="headerlink" title="理想视口"></a>理想视口</h3><blockquote>
-<p>  ideal viewport</p>
-</blockquote>
-<ol>
-<li>理想视口对设备来讲，是最理想的视口尺寸</li>
-<li>是为了是网站在移动端有最理想的浏览和阅读宽度而设定</li>
-<li>需要手动添加 <code>meta</code>视口标签通知浏览器操作</li>
-<li><code>meta</code>视口标签的主要目的：布局视口的宽度应与理想视口的宽度一致</li>
-</ol>
-<h2 id="meta视口标签"><a href="#meta视口标签" class="headerlink" title="meta视口标签"></a>meta视口标签</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>解释说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>width</code></td>
-<td>宽度设置的是viewport宽度，可以设置<code>device-width</code>特殊值</td>
-</tr>
-<tr>
-<td><code>initial-scale</code></td>
-<td>初始缩放比，取值为大于0的数字</td>
-</tr>
-<tr>
-<td><code>maximum-scale</code></td>
-<td>最大缩放比，取值为大于0的数字</td>
-</tr>
-<tr>
-<td><code>minimum-scale</code></td>
-<td>最小缩放比，取值为大于0的数字</td>
-</tr>
-<tr>
-<td><code>user-scalable</code></td>
-<td>用户是否可以缩放，yes或no(1或0)</td>
-</tr>
-</tbody></table>
-<h3 id="标准viewport设置"><a href="#标准viewport设置" class="headerlink" title="标准viewport设置"></a>标准viewport设置</h3><ol>
-<li>视口宽度和设备保持一致 ( <code>width = device-width</code> ) </li>
-<li>视口的默认缩放比例为1.0 ( <code>initial-scale = 1.0</code> )</li>
-<li>不允许用户自行缩放 ( <code>user-scalable = no</code> )</li>
-<li>最大允许的缩放比例为1.0 ( <code>maximum-scale = 1.0</code> )</li>
-<li>最小允许的缩放比例为1.0 ( <code>minimum-scale = 1.0</code> )</li>
-</ol>
-<h2 id="物理像素-amp-物理像素比"><a href="#物理像素-amp-物理像素比" class="headerlink" title="物理像素&amp;物理像素比"></a>物理像素&amp;物理像素比</h2><h3 id="物理像素-点"><a href="#物理像素-点" class="headerlink" title="物理像素(点)"></a>物理像素(点)</h3><p>物理像素(点)指的是屏幕显示的最小颗粒，是物理真实存在的。这是厂商在出厂时就设置的，比如iphone 6/7/8的物理像素(点)是750&times;1334</p>
-<h3 id="物理像素比"><a href="#物理像素比" class="headerlink" title="物理像素比"></a>物理像素比</h3><p>一个<code>px</code>能显示的物理像素点的个数，称为物理像素比或者屏幕像素比</p>
-<h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>开发时的<code>1px</code>不一定等于一个物理像素，在PC端页面<code>1px</code>等于1个物理像素，但在移动端就不尽相同</p>
-<table>
-<thead>
-<tr>
-<th>设备</th>
-<th>尺寸（英寸）</th>
-<th>开发尺寸（px)</th>
-<th>物理像素比（dpr)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>iPhone3G</td>
-<td>3.5</td>
-<td>320&times;480</td>
-<td>1.0</td>
-</tr>
-<tr>
-<td>iPhone4/4s</td>
-<td>3.5</td>
-<td>320&times;480</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>iPhone5/5s/5c</td>
-<td>4.0</td>
-<td>320&times;568</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>HTC One M8</td>
-<td>4.5</td>
-<td>360&times;640</td>
-<td>3.0</td>
-</tr>
-<tr>
-<td>iPhone6</td>
-<td>4.7</td>
-<td>375&times;667</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>Nexus 4</td>
-<td>4.7</td>
-<td>384&times;640</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>Nexus  5x</td>
-<td>5.2</td>
-<td>411&times;731</td>
-<td>2.6</td>
-</tr>
-<tr>
-<td>iPhone6 Plus</td>
-<td>5.5</td>
-<td>414&times;736</td>
-<td>3.0</td>
-</tr>
-<tr>
-<td>Samsung Galaxy Note 4</td>
-<td>5.7</td>
-<td>480&times;853</td>
-<td>3.0</td>
-</tr>
-<tr>
-<td>Sony Speria Z Ultra</td>
-<td>6.4</td>
-<td>540&times;960</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>Nexus 7(‘12)</td>
-<td>7.0</td>
-<td>600&times;960</td>
-<td>1.3</td>
-</tr>
-<tr>
-<td>iPad Mini</td>
-<td>7.9</td>
-<td>768&times;1024</td>
-<td>1.0</td>
-</tr>
-</tbody></table>
-<h3 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h3><p>PC端和早期的手机屏幕是 1CSS像素 = 1 物理像素，随之<strong>Retina</strong>(视网膜屏幕)显示技术的发展，可以把更多的物理像素点压缩至一块屏幕里，从而达到更高的分辨率，并提高屏幕显示的细腻程度。</p>
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200323140130668.png" alt="image-20200323140130668" style="zoom:50%;" />
-
-<h2 id="二倍图"><a href="#二倍图" class="headerlink" title="二倍图"></a>二倍图</h2><h3 id="多倍图"><a href="#多倍图" class="headerlink" title="多倍图"></a>多倍图</h3><p>对于图片，在手机Retina屏中显示，按照大多数移动设备的物理像素比或放大倍数，造成图片模糊，在标准的viewport设置中，使用<strong>倍图</strong>来提高图片质量，解决在高清设备中的模糊问题。由于iPhone6/7/8的影响，通常使用<strong>二倍图</strong>，但现在还存在3倍图、4倍图的情况，需要看实际开发公司需求。以下是倍图设置示例:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 在iPhone8 下面 */</span></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="comment">/* 原始图片100*100px */</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="comment">/* 原始图片100*100px */</span></span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">50px</span> <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="背景缩放-CSS3新增"><a href="#背景缩放-CSS3新增" class="headerlink" title="背景缩放(CSS3新增)"></a>背景缩放(CSS3新增)</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-size: 背景图片宽度 背景图片高度 | cover | contain;</span><br></pre></td></tr></table></figure>
-
-<h4 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h4><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>宽度 高度</td>
-<td>单位:<code>px</code>或<code>%</code>,百分比表示占父盒子宽高的比例，只设置宽度时图片等比例缩放</td>
-</tr>
-<tr>
-<td><code>cover</code></td>
-<td>把背景图片扩展至足够大，以使背景图像完全覆盖背景区域</td>
-</tr>
-<tr>
-<td><code>contain</code></td>
-<td>把图像扩展至最大尺寸，以使其宽度或高度完全适应内容区域</td>
-</tr>
-</tbody></table>
-<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"&gt;</span><br><span class="line">    &lt;title&gt;移动端Web开发-背景缩放&lt;/title&gt;</span><br><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">            <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">li</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">list-style</span>: none;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-tag">div</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">2px</span> solid skyblue;</span><br><span class="line">            <span class="attribute">background</span>: <span class="built_in">url</span>(images/石原里美<span class="number">1</span>.jpg) no-repeat;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.bgsize-px</span> &#123;</span><br><span class="line">            <span class="attribute">background-size</span>: <span class="number">250px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.bgsize-per</span> &#123;</span><br><span class="line">            <span class="attribute">background-size</span>: <span class="number">50%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.bgsize-cover</span> &#123;</span><br><span class="line">            <span class="attribute">background-size</span>: cover;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.bgsize-contain</span> &#123;</span><br><span class="line">            <span class="attribute">background-size</span>: contain;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">ul</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">li</span>&gt;</span><br><span class="line">            &lt;h2&gt;宽高尺寸单位为px&lt;/h2&gt;</span><br><span class="line">            &lt;div class="bgsize-px"&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;<span class="selector-tag">li</span>&gt;</span><br><span class="line">            &lt;h2&gt;宽高尺寸单位为%&lt;/h2&gt;</span><br><span class="line">            &lt;div class="bgsize-per"&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;<span class="selector-tag">li</span>&gt;</span><br><span class="line">            &lt;h2&gt;属性值为cover&lt;/h2&gt;</span><br><span class="line">            &lt;div class="bgsize-cover"&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;<span class="selector-tag">li</span>&gt;</span><br><span class="line">            &lt;h2&gt;属性值为contain&lt;/h2&gt;</span><br><span class="line">            &lt;div class="bgsize-contain"&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200323153544407.png" alt="image-20200323153544407" style="zoom:50%;" />
-
-<h3 id="多倍图切图-cutterman"><a href="#多倍图切图-cutterman" class="headerlink" title="多倍图切图 cutterman"></a>多倍图切图 cutterman</h3><ul>
-<li>@3X  –&gt; 3倍图</li>
-<li>@2X  –&gt; 2倍图</li>
-<li>@1X  –&gt; 1倍图(原图)</li>
-</ul>
-<img src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200323154347342.png" alt="image-20200323154347342" style="zoom: 67%;" />
-
-<h2 id="移动端开发选择"><a href="#移动端开发选择" class="headerlink" title="移动端开发选择"></a>移动端开发选择</h2><h3 id="单独制作移动端页面-主流"><a href="#单独制作移动端页面-主流" class="headerlink" title="单独制作移动端页面(主流)"></a>单独制作移动端页面(主流)</h3><blockquote>
-<p>  京东商城手机版、淘宝触屏版、苏宁易购手机版……</p>
-</blockquote>
-<p>通常情况下，网站域名前面加 <strong>m</strong>（moile)可以打开移动端页面。通过判断设备，如果是移动设备打开，则跳到移动端页面。</p>
 <ul>
-<li>流式布局(百分比布局)</li>
-<li>flex弹性布局(推荐)</li>
-<li>rem适配布局(推荐)</li>
+<li>数组的字面量是方括号[]</li>
+<li>声明数组并赋值称为数组的初始化</li>
+<li>这种字面量方式是最多使用的方式</li>
+<li>数组中可以存放<strong>任意类型</strong>的数据，例如字符串、数字、布尔型等</li>
+<li>JS的数组长度是不固定的</li>
 </ul>
-<p>建议：选取一种主要技术选型，其他技术作为辅助，混合技术开发</p>
-<h3 id="响应式兼容PC和移动端-其次"><a href="#响应式兼容PC和移动端-其次" class="headerlink" title="响应式兼容PC和移动端(其次)"></a>响应式兼容PC和移动端(其次)</h3><blockquote>
-<p>  三星电子官网……</p>
-</blockquote>
-<p>通过判断屏幕宽度来改变样式，以适应不同终端</p>
-<p>缺点: 制作麻烦，需要花很大精力去调兼容性问题</p>
+<h2 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h2><h3 id="数组的索引"><a href="#数组的索引" class="headerlink" title="数组的索引"></a>数组的索引</h3><p>数组的索引(下标、角标)是用来访问数组元素的序号，<strong>数组下标从0开始</strong></p>
+<h3 id="数组的赋值和取值"><a href="#数组的赋值和取值" class="headerlink" title="数组的赋值和取值"></a>数组的赋值和取值</h3><p>数组可以通过<strong>索引</strong>来访问、设置、修改对应的数组元素，我们可以通过 “<strong><code>数组名[索引]</code></strong>“的形式来获取或者操作数组中的元素</p>
+<h4 id="数组的赋值"><a href="#数组的赋值" class="headerlink" title="数组的赋值"></a>数组的赋值</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数组名[角标] = 值;	<span class="comment">//角标可以是任意的非负整数</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>媒体查询</li>
-<li>bootstrap</li>
+<li>直接给数组名赋值，会覆盖以前的数据</li>
 </ul>
-<h2 id="移动端技术解决方案"><a href="#移动端技术解决方案" class="headerlink" title="移动端技术解决方案"></a>移动端技术解决方案</h2><h3 id="移动端浏览器"><a href="#移动端浏览器" class="headerlink" title="移动端浏览器"></a>移动端浏览器</h3><p>移动端浏览器基本以webkit内核为主，因此我们就考虑webkit兼容性问题，即浏览器的私有前缀只需添加webkit即可，并可以放心使用H5标签和CSS3样式</p>
-<h3 id="CSS初始化"><a href="#CSS初始化" class="headerlink" title="CSS初始化"></a>CSS初始化</h3><p>移动端CSS初始化（<strong>CSS reset</strong>）推荐使用 <strong>normalize.css</strong>，优点如下:</p>
+<h4 id="数组的取值"><a href="#数组的取值" class="headerlink" title="数组的取值"></a>数组的取值</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量名 = 数组名[角标];	<span class="comment">//返回当前角标对应存储的值</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>保护了有价值的默认值</li>
-<li>修复了浏览器的bug</li>
-<li>模块化</li>
-<li>拥有详细的文档</li>
+<li>如果角标不存在(即未给该角标的元素赋值)，返回undefined</li>
 </ul>
-<blockquote>
-<p>  官网地址 : <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">https://necolas.github.io/normalize.css/</a></p>
-</blockquote>
-<h3 id="CSS3-盒子模型"><a href="#CSS3-盒子模型" class="headerlink" title="CSS3 盒子模型"></a>CSS3 盒子模型</h3><ul>
-<li>传统盒子模型: 盒子的宽度 = width + border + padding</li>
-<li>CSS3盒子模型: 盒子的宽度 = width</li>
+<h3 id="数组的length属性"><a href="#数组的length属性" class="headerlink" title="数组的length属性"></a>数组的length属性</h3><ul>
+<li><p>数组的length属性定义了数组元素的数量，它是可读写的</p>
+</li>
+<li><p>使用 ”<strong><code>数组名.length</code></strong>“可以访问数组元素的数量(数组长度)，</p>
+</li>
+<li><p>可通过”<strong><code>数组名.length = 值</code></strong>“动态改变数组的长度，此时若改变后的length &gt; 原有长度，则使用undefined进行填充；若改变后的length &lt; 原有长度，则从后面开始截取，被截取的数据会被删除</p>
+</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CSS3 盒子模型 */</span></span><br><span class="line"><span class="selector-tag">box-sizing</span>: <span class="selector-tag">border-box</span>;</span><br><span class="line"><span class="comment">/* 传统盒子模型 */</span></span><br><span class="line"><span class="selector-tag">box-sizing</span>: <span class="selector-tag">content-box</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h3><h4 id="for循环遍历数组"><a href="#for循环遍历数组" class="headerlink" title="for循环遍历数组"></a>for循环遍历数组</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="特殊样式"><a href="#特殊样式" class="headerlink" title="特殊样式"></a>特殊样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CSS3盒子模型 */</span></span><br><span class="line"><span class="selector-tag">box-sizing</span>: <span class="selector-tag">border-box</span>;</span><br><span class="line"><span class="selector-tag">-webkit-box-sizing</span>: <span class="selector-tag">border-box</span>;</span><br><span class="line"><span class="comment">/* 清除点击高亮，比如a标签，设置为transparent透明 */</span></span><br><span class="line"><span class="selector-tag">-webkit-tap-highlight-color</span>: <span class="selector-tag">transparent</span>;</span><br><span class="line"><span class="comment">/* 去除移动端浏览器默认外观，</span></span><br><span class="line"><span class="comment">在iOS上加上这个属性才能给按钮和输入框自定义样式 */</span></span><br><span class="line"><span class="selector-tag">-webkit-appearance</span>: <span class="selector-tag">none</span>;</span><br><span class="line"><span class="comment">/* 禁用长按页面时的弹出菜单,如a、img标签 */</span></span><br><span class="line"><span class="selector-tag">-webkit-touch-callout</span>: <span class="selector-tag">none</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h4 id="for-in循环遍历数组"><a href="#for-in循环遍历数组" class="headerlink" title="for-in循环遍历数组"></a>for-in循环遍历数组</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     
@@ -859,11 +536,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/tags/viewport/" class="article-tag-list-link color4">viewport</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/二倍图/" class="article-tag-list-link color4">二倍图</a>
+        			<a href="/tags/JavaScript/" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -883,7 +556,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color2">移动端</a>
+        			<a href="/categories/学习笔记/前端开发/JavaScript/" class="article-tag-list-link color5">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -902,18 +575,9 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/article/3fab69a3.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          02-移动端布局-流式布局
-        
-      </div>
-    </a>
   
-  
-    <a href="/article/d1478627.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">06-HTML的文本标签</div>
+    <a href="/article/537394b5.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">05-JS的流程控制</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
 <meta property="og:description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』">
 <meta property="article:published_time" content="2020-04-03T05:36:59.000Z">
-<meta property="article:modified_time" content="2020-04-03T05:41:59.406Z">
+<meta property="article:modified_time" content="2020-04-04T10:38:57.630Z">
 <meta property="article:author" content="辛猿毅码">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -258,7 +258,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-			总文章数 : 31 篇 | 总字数 : <span class="post-count">41.8k 字</span>
+			总文章数 : 33 篇 | 总字数 : <span class="post-count">44.1k 字</span>
 		</nav>
 		
 		<nav class="header-smart-menu">
@@ -336,7 +336,7 @@ var _hmt = _hmt || [];
 				</div>
 			</nav>
 			<nav class="header-subtitle">
-				总文章数 : 31 篇 | 总字数 : <span class="post-count">41.8k 字</span>
+				总文章数 : 33 篇 | 总字数 : <span class="post-count">44.1k 字</span>
 			</nav>
 			<nav class="header-menu js-header-menu">
 				<ul style="width: 70%">
@@ -390,7 +390,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.7k字</span>
+        <span class="post-count">1.8k字</span>
       </span>
     </span>
 
@@ -572,6 +572,12 @@ var _hmt = _hmt || [];
 <td>true</td>
 </tr>
 </tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="literal">null</span>==<span class="literal">undefined</span>);<span class="comment">//true</span></span><br><span class="line">alert(<span class="literal">null</span>===<span class="literal">undefined</span>);<span class="comment">//false</span></span><br><span class="line">alert(<span class="literal">NaN</span>==<span class="literal">NaN</span>);<span class="comment">//false</span></span><br><span class="line">alert(<span class="literal">NaN</span>===<span class="literal">NaN</span>);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>由于null和undefined都代表无效的值，故<strong>null和undefined做==判断时返回true</strong>，但两者的数据类型不同(null 为 object，undefined为undefined)，故<strong>null和undefined做===判断时返回false</strong>。</li>
+<li>由于NaN代表一个范围(Not a Number)，不是一个确定的值，NaN无法和任何数做比较，故<strong>NaN和NaN做==和===判断时都返回false</strong></li>
+</ul>
 <h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>逻辑运算符是用来进行<strong>布尔值</strong>运算的运算符，其返回值也是布尔值，后面开发中经常用于多个条件的判断</p>
 <table>
 <thead>
@@ -1103,6 +1109,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
@@ -1111,7 +1121,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color3">查阅</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1123,7 +1133,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查阅</a>
+                <a href="javascript:void(0)" class="js-tag color5">流式布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">flex布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1131,15 +1145,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">流式布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">flex布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1163,10 +1169,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
@@ -1180,6 +1182,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
               </li>
             
             <div class="clearfix"></div>
