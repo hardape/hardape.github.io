@@ -12,16 +12,18 @@
   <link rel="dns-prefetch" href="https://code-ape.gitee.io">
 
 
-  <title>Tag: flex布局 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
+  <title>04-Servlet的概念和运行流程 | 辛猿毅码(^∇^*)欢迎来到我的个人博客♪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个90后的技术博客，目前用于记录学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:url" content="https://code-ape.gitee.io/tags/flex%E5%B8%83%E5%B1%80/index.html">
+  <meta name="description" content="『 注 : 本笔记摘自视频 尚学堂-Servlet和JSP(JAVAEE基础)全新教程，如有侵权,请联系删除。』">
+<meta property="og:type" content="article">
+<meta property="og:title" content="04-Servlet的概念和运行流程">
+<meta property="og:url" content="https://code-ape.gitee.io/article/287de886.html">
 <meta property="og:site_name" content="辛猿毅码(^∇^*)欢迎来到我的个人博客♪">
-<meta property="og:description" content="一个90后的技术博客，目前用于记录学习笔记">
+<meta property="og:description" content="『 注 : 本笔记摘自视频 尚学堂-Servlet和JSP(JAVAEE基础)全新教程，如有侵权,请联系删除。』">
+<meta property="article:published_time" content="2020-04-05T12:41:16.000Z">
+<meta property="article:modified_time" content="2020-04-05T12:44:03.901Z">
 <meta property="article:author" content="辛猿毅码">
-<meta property="article:tag" content="笔记 代码 博客">
+<meta property="article:tag" content="Servlet">
 <meta name="twitter:card" content="summary">
   
   <link rel="alternative" href="/atom.xml" title="辛猿毅码(^∇^*)欢迎来到我的个人博客♪" type="application/atom+xml">
@@ -360,60 +362,171 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-
+            <article id="post-04-Servlet的概念和运行流程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
-  <div class="archives-title" > <i class="fa fa-bookmark" aria-hidden="true"></i> flex布局 <span class="type"> 标签</span></div>
   
-    
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020</a>
-        </div>
-       
-        <div class="archives">
-    
-    
-      <div class="archive-month-wrap">
-        <a href="/archives/2020/03" class="archive-year"> 「 03月 」</a>
-      </div>
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/ae8d1889.html" class="archive-article-date">
-  	<time datetime="2020-03-28T08:54:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/ae8d1889.html">05-flex布局-仿携程案例</a>
+    <h1 class="article-title" itemprop="name">
+      04-Servlet的概念和运行流程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+  
+  
+	<!-- 不蒜子统计 -->
+	<span  class="archive-article-date">
+		<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/article/287de886.html" class="archive-article-date">
+  	<time datetime="2020-04-05T12:41:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
+</a>
+  <!-- 开始添加字数统计-->
+  
+  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">604字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">≈2分钟</span>
+      </span>
+    </span>
+</div>
+  
+  
+  </header>
+  
+  <!-- 目录内容 -->
+  
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();">
+    <i class="fa fa-compass" aria-hidden="true"></i>
+    <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+    <div class="toc-scroll">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#课程介绍"><span class="toc-number">1.</span> <span class="toc-text">课程介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet-介绍"><span class="toc-number">2.</span> <span class="toc-text">Servlet 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-number">2.1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决"><span class="toc-number">2.2.</span> <span class="toc-text">解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">2.3.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-number">2.4.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-number">2.5.</span> <span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet的使用"><span class="toc-number">3.</span> <span class="toc-text">Servlet的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet的运行流程"><span class="toc-number">4.</span> <span class="toc-text">Servlet的运行流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#URL"><span class="toc-number">4.1.</span> <span class="toc-text">URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成"><span class="toc-number">4.2.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URI"><span class="toc-number">4.3.</span> <span class="toc-text">URI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行流程"><span class="toc-number">4.4.</span> <span class="toc-text">运行流程</span></a></li></ol></li></ol>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function showToc() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:block");
+      show_toc_btn.setAttribute("style", "display:none");
+    };
+    function showBtn() {
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style", "display:none");
+      show_toc_btn.setAttribute("style", "display:block");
+    };
+  </script>
+  
+  <!-- 目录内容结束 -->
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.bilibili.com/video/BV15b411778m" target="_blank" rel="noopener">尚学堂-Servlet和JSP(JAVAEE基础)全新教程</a>，如有侵权,请联系删除。』</em></p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h2><p>在运行了自己的第一个web 程序后，我们对服务器及其运行的代码有了更进一步的认知，但是对于具体的运行细节还是一知半解。那么服务器到底怎么运行的呢？</p>
+<h2 id="Servlet-介绍"><a href="#Servlet-介绍" class="headerlink" title="Servlet 介绍"></a>Servlet 介绍</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>服务器在接收到浏览器的请求后，会自动调用对应的逻辑代码进行请求处理。但是逻辑代码是由程序员编写并放到服务器中，那么服务器怎么知道该怎么调用并调用哪个类和哪个方法来进行请求处理。</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>程序员在编写代码的时候如果能够按照服务器能够识别的规则进行编写，浏览器按照指定的规则进行发送请求，那么服务器就可以调用并执行响应的逻辑代码进行请求处理了。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>Servlet 技术</p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>狭义的 Servlet 是指 Java 语言实现的一个接口，广义的 Servlet 是指任何实现了这个 Servlet 接口的类，一般情况下，人们将 Servlet 理解为后者。</p>
+<p>Servlet 运行于支持 Java 的应用服务器中。从原理上讲，Servlet 可以响应任何类型的请求，但绝大多数情况下 Servlet 只用来扩展基于 HTTP 协议的 Web 服务器</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>运行在支持 java 的应用服务器上</li>
+<li>Servlet 的实现遵循了服务器能够识别的规则，也就是服务器会自动的根据请求调用对应的 servlet 进行请求处理。</li>
+<li>简单方便，可移植性强</li>
+</ol>
+<h2 id="Servlet的使用"><a href="#Servlet的使用" class="headerlink" title="Servlet的使用"></a>Servlet的使用</h2><ol>
+<li>创建普通的 java 类并继承 HttpServlet</li>
+<li>覆写 service 方法</li>
+<li>在 service 方法中书写逻辑代码即可</li>
+<li>在 webRoot 下的 WEB-INF 文件夹下的 web.xml文件中配置 servlet</li>
+</ol>
+<h2 id="Servlet的运行流程"><a href="#Servlet的运行流程" class="headerlink" title="Servlet的运行流程"></a>Servlet的运行流程</h2><h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p><a href="http://localhost:8888/myServlet/my" target="_blank" rel="noopener">http://localhost:8888/myServlet/my</a></p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>服务器地址:端口号/虚拟项目名/servlet 的别名</p>
+<h3 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h3><p>虚拟项目名/servlet 的别名</p>
+<h3 id="运行流程"><a href="#运行流程" class="headerlink" title="运行流程"></a>运行流程</h3><p><strong>浏览器发送请求到服务器，服务器根据请求 URL 地址中的 URI 信息在 webapps 目录下找到对应的项目文件夹，然后在 web.xml 中根据servlet的别名检索对应的 servlet，找到后调用并执行Servlet。</strong></p>
+
+    
+    <!-- 《添加版权声明 -->
+    
+      <!-- 《添加版权声明 -->
+<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 添加版权声明》 -->
+    
+    <!-- 添加版权声明》 -->
+    
+    <div class="page-reward">
+      <a href="javascript:;" class="page-reward-btn tooltip-top">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/tags/flex布局/" class="article-tag-list-link color2">flex布局</a>
+        			<a href="/tags/Servlet/" class="article-tag-list-link color3">Servlet</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -423,89 +536,95 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color1">前端开发</a>
+        			<a href="/categories/学习笔记/JavaEE/" class="article-tag-list-link color4">JavaEE</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color2">移动端</a>
+        			<a href="/categories/学习笔记/JavaEE/Servlet/" class="article-tag-list-link color3">Servlet</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    
+
+    
+
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
   
-    
-    
-    
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/article/4bf60935.html" class="archive-article-date">
-  	<time datetime="2020-03-26T07:23:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-26</time>
-</a>
+  
+    <a href="/article/c0b60077.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">04-Emmet语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/4bf60935.html">04-移动端布局-flex布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/tags/flex布局/" class="article-tag-list-link color2">flex布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/" class="article-tag-list-link color1">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/" class="article-tag-list-link color1">前端开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记/前端开发/移动端/" class="article-tag-list-link color2">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div class="comment"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $("#wrapper img").each(function () {
+    // $(this).attr("data-fancybox", "gallery"); 直接给img添加data-fancybox会导致点击图片后图片消失
+    var element = document.createElement("a");
+    $(element).attr("data-fancybox", "gallery");
+    $(element).attr("href", $(this).attr("src"));
+    $(this).wrap(element);
+  });
+</script>
 
 
           </div>
@@ -604,9 +723,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
