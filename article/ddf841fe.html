@@ -265,7 +265,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-			总文章数 : 47 篇 | 总字数 : <span class="post-count">78.7k 字</span>
+			总文章数 : 47 篇 | 总字数 : <span class="post-count">79k 字</span>
 		</nav>
 		
 		<nav class="header-smart-menu">
@@ -343,7 +343,7 @@ var _hmt = _hmt || [];
 				</div>
 			</nav>
 			<nav class="header-subtitle">
-				总文章数 : 47 篇 | 总字数 : <span class="post-count">78.7k 字</span>
+				总文章数 : 47 篇 | 总字数 : <span class="post-count">79k 字</span>
 			</nav>
 			<nav class="header-menu js-header-menu">
 				<ul style="width: 70%">
@@ -745,7 +745,7 @@ var _hmt = _hmt || [];
 <script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 <!-- valine评论，详见https://deserts.io/diy-a-comment-system/ -->
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine"></script>
 
 <script>
 	// < !--.comment要与评论区元素一致-->
@@ -754,6 +754,7 @@ var _hmt = _hmt || [];
 	comment_el = '.comment';
 	load_valine = function () {
 		new Valine({
+			av: AV, 
 			el: comment_el,
 			notify: notify,
 			verify: verify,
@@ -859,15 +860,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
