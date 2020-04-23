@@ -585,11 +585,13 @@ var _hmt = _hmt || [];
 		new Valine({
 			av: AV, 
 			el: comment_el,
-			notify: notify,
-			verify: verify,
+			visitor: true,
+			recordIP: true,
+			enableQQ: true,
+			requiredFields: ['nick','mail'],
 			app_id: "u71gOFSYAVcNzb7WFBWSTdrb-gzGzoHsz",
 			app_key: "LGQc6I41MV1C6nt976QDCaiH",
-			placeholder: "看了这么久，不说点什么吗？别忘记留下你的邮箱和昵称哦╰(●’◡’●)╮",
+			placeholder: "看了这么久，不说点什么吗？试试在昵称处写下QQ号,别忘记邮箱哦╰(●’◡’●)╮",
 			avatar: "monsterid",
 			path: window.location.pathname
 		});
