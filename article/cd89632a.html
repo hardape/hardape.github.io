@@ -1,225 +1,25 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01-初识JavaScript | 辛猿毅码的个人博客</title><meta name="description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』    JavaScript简介JavaScript历史 发明者：布兰登·艾奇(Brendan Eich，1961~ )。 他在1995年利用10天完成JavaScript设计。 他最初在网景公司合作，将该语言命名为LiveScript，后来在与Sun公司合作之后将其改名为JavaScript。  JavaScri"><meta name="keywords" content="JavaScript"><meta name="author" content="辛猿毅码"><meta name="copyright" content="辛猿毅码"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://gitee.com/code-ape/blogImage/raw/master/img/icon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="dns-prefetch" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="vg16NGMGF6G7YETw"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="01-初识JavaScript"><meta name="twitter:description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』    JavaScript简介JavaScript历史 发明者：布兰登·艾奇(Brendan Eich，1961~ )。 他在1995年利用10天完成JavaScript设计。 他最初在网景公司合作，将该语言命名为LiveScript，后来在与Sun公司合作之后将其改名为JavaScript。  JavaScri"><meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="og:type" content="article"><meta property="og:title" content="01-初识JavaScript"><meta property="og:url" content="https://www.hardape.top/article/cd89632a.html"><meta property="og:site_name" content="辛猿毅码的个人博客"><meta property="og:description" content="『 注 : 本笔记摘自视频 JavaScript基础，如有侵权,请联系删除。』    JavaScript简介JavaScript历史 发明者：布兰登·艾奇(Brendan Eich，1961~ )。 他在1995年利用10天完成JavaScript设计。 他最初在网景公司合作，将该语言命名为LiveScript，后来在与Sun公司合作之后将其改名为JavaScript。  JavaScri"><meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="article:published_time" content="2020-04-03T04:46:25.000Z"><meta property="article:modified_time" content="2020-05-22T13:34:43.383Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
-var t = Cookies.get("theme")
-if (autoChangeMode == '1'){
-  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+extends includes/layout.pug
 
-  if (t === undefined){
-    if (isLightMode) activateLightMode()
-    else if (isDarkMode) activateDarkMode()
-    else if (isNotSpecified || hasNoSupport){
-      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      var now = new Date()
-      var hour = now.getHours()
-      var isNight = hour < 6 || hour >= 18
-      isNight ? activateDarkMode() : activateLightMode()
-  }
-  } else if (t == 'light') activateLightMode()
-  else activateDarkMode()
+block content
+  article#post(class="")
+    #article-container.post-content!=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      !=partial('includes/share/index', {}, {cache:theme.fragment_cache})
+        
+    if theme.reward.enable
+      !=partial('includes/post/reward', {}, {cache:theme.fragment_cache})
 
-} else if (autoChangeMode == '2'){
-  now = new Date();
-  hour = now.getHours();
-  isNight = hour < 6 || hour >= 18
-  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode() 
-} else {
-  if ( t == 'dark' ) activateDarkMode()
-  else if ( t == 'light') activateLightMode()
-}
+    //- ad
+    if theme.ad && theme.ad.post
+      .post-ad!=theme.ad.post
 
-function activateDarkMode(){
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
-  }
-}
-function activateLightMode(){
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
-  }
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://www.hardape.top/article/cd89632a.html"><link rel="prev" title="02-JS的变量" href="https://www.hardape.top/article/c36156f0.html"><link rel="next" title="10-响应式布局-阿里百秀案例" href="https://www.hardape.top/article/a5fd5b4c.html"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?8d17856522869b53e1b8ab20f2e3fa74";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
-  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  bookmark: {
-    message_prev: '按',
-    message_next: '键将本页加入书签'
-  },
-  runtime_unit: '天',
-  runtime: true,
-  copyright: {"languages":{"author":"作者: 辛猿毅码","link":"链接: ","source":"来源: 辛猿毅码的个人博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  ClickShowText: undefined,
-  medium_zoom: true,
-  fancybox: false,
-  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
-  baiduPush: true,
-  highlightCopy: true,
-  highlightLang: true,
-  highlightShrink: 'false',
-  isFontAwesomeV5: true,
-  isPhotoFigcaption: false,
-  islazyload: true,
-  isanchor: true
-  
-}</script><script>var GLOBAL_CONFIG_SITE = { 
-  isPost: true,
-  isHome: false,
-  isSidebar: true  
-  }</script><noscript><style>
-#page-header {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="辛猿毅码的个人博客" type="application/atom+xml">
-</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://gitee.com/code-ape/blogImage/raw/master/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">57</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">31</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">16</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-picture"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript简介"><span class="toc-number">1.</span> <span class="toc-text">JavaScript简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript历史"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript是什么"><span class="toc-number">1.2.</span> <span class="toc-text">JavaScript是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript的作用"><span class="toc-number">1.3.</span> <span class="toc-text">JavaScript的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器执行JS简介"><span class="toc-number">2.</span> <span class="toc-text">浏览器执行JS简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS的组成"><span class="toc-number">3.</span> <span class="toc-text">JS的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ECMAScript"><span class="toc-number">3.1.</span> <span class="toc-text">ECMAScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM"><span class="toc-number">3.2.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BOM"><span class="toc-number">3.3.</span> <span class="toc-text">BOM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS三种书写位置"><span class="toc-number">4.</span> <span class="toc-text">JS三种书写位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内式JS"><span class="toc-number">4.1.</span> <span class="toc-text">行内式JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内嵌式JS"><span class="toc-number">4.2.</span> <span class="toc-text">内嵌式JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外部JS文件"><span class="toc-number">4.3.</span> <span class="toc-text">外部JS文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS的注释"><span class="toc-number">5.</span> <span class="toc-text">JS的注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单行注释"><span class="toc-number">5.1.</span> <span class="toc-text">单行注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行注释"><span class="toc-number">5.2.</span> <span class="toc-text">多行注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS输入输出语句"><span class="toc-number">6.</span> <span class="toc-text">JS输入输出语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器断点调试"><span class="toc-number">7.</span> <span class="toc-text">浏览器断点调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调试方法"><span class="toc-number">7.1.</span> <span class="toc-text">调试方法</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">辛猿毅码的个人博客</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-picture"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">01-初识JavaScript</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-04-03 12:46:25"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-04-03</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-05-22 21:34:43"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-05-22</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/">JavaScript</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon far fa-file-word" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">1.3k</span><span class="post-meta__separator">|</span><i class="post-meta__icon far fa-clock" aria-hidden="true"></i><span>阅读时长: 4 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon far fa-comments" aria-hidden="true"></i><span>评论数:</span><a href="/article/cd89632a.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/article/cd89632a.html" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><blockquote>
-<p>  <em>『 注 : 本笔记摘自视频 <a href="https://www.bilibili.com/video/av56979800" target="_blank" rel="noopener">JavaScript基础</a>，如有侵权,请联系删除。』</em></p>
-</blockquote>
-<a id="more"></a>
-
-<h2 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h2><h3 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h3><ul>
-<li>发明者：布兰登·艾奇(Brendan Eich，1961~ )。</li>
-<li>他在1995年利用10天完成JavaScript设计。</li>
-<li>他最初在网景公司合作，将该语言命名为LiveScript，后来在与Sun公司合作之后将其改名为JavaScript。</li>
-</ul>
-<h3 id="JavaScript是什么"><a href="#JavaScript是什么" class="headerlink" title="JavaScript是什么"></a>JavaScript是什么</h3><ul>
-<li>JavaScript是世界上最流行的语言之一，是一种运行在客户端的脚本语言(Script即脚本的意思)</li>
-<li>脚本语言：不需要编译，运行过程中由js解释器(js引擎)<strong>逐行</strong>来进行解释并执行</li>
-<li>现在也可以基于Node.js技术进行服务器端编程</li>
-<li>JavaScript简称为<strong>JS</strong>，JS为解释型语言</li>
-</ul>
-<h3 id="JavaScript的作用"><a href="#JavaScript的作用" class="headerlink" title="JavaScript的作用"></a>JavaScript的作用</h3><ul>
-<li>表单动态校验(密码强度检测) → JS产生的最初目的</li>
-<li>网页特效</li>
-<li>服务端开发( Node.js )</li>
-<li>桌面程序( Electron )</li>
-<li>App( Cordova )</li>
-<li>控制硬件-物联网( Ruff )</li>
-<li>游戏开发( cocos2d-js )</li>
-</ul>
-<h2 id="浏览器执行JS简介"><a href="#浏览器执行JS简介" class="headerlink" title="浏览器执行JS简介"></a>浏览器执行JS简介</h2><p>浏览器分成两部分 → <strong>渲染引擎</strong> 和 <strong>JS引擎</strong> </p>
-<ul>
-<li><strong>渲染引擎</strong> ：用来解析HTML和CSS，俗称<strong>内核</strong>，比如Chrome浏览器的blink，老版本的webkit</li>
-<li><strong>JS引擎</strong>：也称为JS解释器。用来读取网页中的JavaScript代码，对其处理后运行，比如Chrome浏览器的V8</li>
-</ul>
-<p>浏览器本身并不会执行JS代码，而是通过内置JavaScript引擎(解释器)来执行JS代码，JS引擎执行代码时逐行解释每一句源码(转换为机器语言)，然后由计算机去执行，所以JavaScript语言归为脚本语言，会逐行解释执行。</p>
-<h2 id="JS的组成"><a href="#JS的组成" class="headerlink" title="JS的组成"></a>JS的组成</h2><p>JS由三部分组成，分别是<strong>ECMAScript ( JavaScript语法)</strong>，<strong>DOM ( 页面文档对象类型)</strong>，<strong>BOM ( 浏览器对象模型 )</strong></p>
-<h3 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h3><p><strong>ECMAScript</strong>是由ECMA国际(原欧洲计算机制造商协会)进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为<strong>JavaScript</strong>或<strong>JScript</strong>，但实际上后两者是ECMAScript语言的实现和扩展。</p>
-<p><img src= /img/loading.gif data-src="https://gitee.com/code-ape/blogImage/raw/master/img/image-20200402164825875.png" alt="image-20200402164825875"></p>
-<p>ECMAScript规定了JS的<strong>编程语法</strong>和<strong>基础核心知识</strong>，是所有浏览器厂商共同遵守的一套JS语法工业标准</p>
-<p>更多参考MDN：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview</a></p>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p><strong>DOM——文档对象模型(Document Object Model)</strong>是W3C推荐的处理可扩展标记语言的标准编程接口，通过DOM提供的接口可以对页面上的各种元素进行操作(大小、位置、颜色等)</p>
-<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><p><strong>BOM——浏览器对象模型(Browser Object Model)</strong>提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。通过BOM可以操作浏览器窗口，比如弹出框、控制浏览器跳转、获取分辨率等。</p>
-<h2 id="JS三种书写位置"><a href="#JS三种书写位置" class="headerlink" title="JS三种书写位置"></a>JS三种书写位置</h2><p>JS有3种书写位置，分别为<strong>行内</strong>、<strong>内嵌</strong>和<strong>外部</strong> </p>
-<h3 id="行内式JS"><a href="#行内式JS" class="headerlink" title="行内式JS"></a>行内式JS</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 唐伯虎点秋香 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"唐伯虎"</span> <span class="attr">onclick</span>=<span class="string">"alert('秋香')"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>可以将单行或少量JS代码写在HTML标签的事件属性中(以on开头的属性)，如<code>onclick</code>；</li>
-<li>注意单双引号的使用：<strong>在HTML中推荐使用双引号，在JS中推荐使用单引号</strong>；</li>
-<li>可读性差，在HTML中编写大量JS代码时，不方便阅读；</li>
-<li>引号易错，引号多层嵌套匹配时，非常容易弄混；</li>
-<li>特殊情况下使用</li>
-</ul>
-<h3 id="内嵌式JS"><a href="#内嵌式JS" class="headerlink" title="内嵌式JS"></a>内嵌式JS</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    alert(<span class="string">"唐伯虎点秋香"</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>可以将多行JS代码写到<code>&lt;script&gt;</code>标签中</li>
-<li>内嵌JS是学习是常用的方式</li>
-</ul>
-<h3 id="外部JS文件"><a href="#外部JS文件" class="headerlink" title="外部JS文件"></a>外部JS文件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">scr</span>=<span class="string">"my.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>利于HTML页面代码结构化，把大段JS代码独立到HTML页面之外，既美观，又方便文件级别的复用</li>
-<li>引用外部JS文件的<code>script</code>标签中不可以写代码</li>
-<li>适合于JS代码量比较大的情况</li>
-</ul>
-<h2 id="JS的注释"><a href="#JS的注释" class="headerlink" title="JS的注释"></a>JS的注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我是单行注释</span></span><br></pre></td></tr></table></figure>
-
-<p>在VSCode中单行注释的快捷键为【<strong>ctrl + /</strong>】</p>
-<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    我是多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<p>在VSCode中多行注释的快捷键为【<strong>shift + alt + A</strong>】，建议修改为【<strong>ctrl + shift + /</strong>】</p>
-<h2 id="JS输入输出语句"><a href="#JS输入输出语句" class="headerlink" title="JS输入输出语句"></a>JS输入输出语句</h2><p>为了方便信息的输入输入，JS中提供了一些输入输出语句，其常用的语句如下:</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>归属</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>alert(msg)</code></td>
-<td>浏览器弹出警示框</td>
-<td>浏览器</td>
-</tr>
-<tr>
-<td><code>console.log(msg)</code></td>
-<td>浏览器控制台打印输出信息，多个值可用逗号隔开</td>
-<td>浏览器</td>
-</tr>
-<tr>
-<td><code>prompt(info)</code></td>
-<td>浏览器弹出输入框，用户可以输入</td>
-<td>浏览器</td>
-</tr>
-</tbody></table>
-<h2 id="浏览器断点调试"><a href="#浏览器断点调试" class="headerlink" title="浏览器断点调试"></a>浏览器断点调试</h2><p>断点调试是指自己在程序的某一行设置一个断点，调试时，程序运行到这一行就会停住，然后可以一步一步往下调试，调试过程中可以看各个变量当前的值，出错的话，调试到出错的代码行即显示错误，停下。</p>
-<h3 id="调试方法"><a href="#调试方法" class="headerlink" title="调试方法"></a>调试方法</h3><ul>
-<li>Chrome浏览器中打开开发者工具(windows通常使用F12)中的sources，找到需要调试的文件，在程序的某一行设置断点，并刷新页面；</li>
-<li>通过watch(监视)可以监视变量的值的变化，也可以直接将鼠标放置源代码变量上可显示变量的值；</li>
-<li>使用F11可以使程序单步执行，此时可观察watch中变量的值的变化。</li>
-</ul>
-</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">辛猿毅码</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.hardape.top/article/cd89632a.html">https://www.hardape.top/article/cd89632a.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.hardape.top" target="_blank">辛猿毅码的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/code-ape/blogImage/raw/master/img/ES6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="https://gitee.com/code-ape/blogImage/raw/master/img/wechatpay.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="post-qr-code__img" src="https://gitee.com/code-ape/blogImage/raw/master/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/article/c36156f0.html"><img class="prev_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">02-JS的变量</div></div></a></div><div class="next-post pull_right"><a href="/article/a5fd5b4c.html"><img class="next_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">10-响应式布局-阿里百秀案例</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/article/c36156f0.html" title="02-JS的变量"><img class="relatedPosts_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-03</div><div class="relatedPosts_title">02-JS的变量</div></div></a></div><div class="relatedPosts_item"><a href="/article/42787a2e.html" title="03-JS的数据类型"><img class="relatedPosts_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-03</div><div class="relatedPosts_title">03-JS的数据类型</div></div></a></div><div class="relatedPosts_item"><a href="/article/7af1f2dc.html" title="04-JS的运算符"><img class="relatedPosts_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-03</div><div class="relatedPosts_title">04-JS的运算符</div></div></a></div><div class="relatedPosts_item"><a href="/article/537394b5.html" title="05-JS的流程控制"><img class="relatedPosts_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-04</div><div class="relatedPosts_title">05-JS的流程控制</div></div></a></div><div class="relatedPosts_item"><a href="/article/2425cb47.html" title="06-JS的数组"><img class="relatedPosts_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-04</div><div class="relatedPosts_title">06-JS的数组</div></div></a></div><div class="relatedPosts_item"><a href="/article/bc1cebfd.html" title="07-JS的函数"><img class="relatedPosts_cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-05</div><div class="relatedPosts_title">07-JS的函数</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
-  var from = from
-  var setting = set.split(',').filter(function(item){
-  return from.indexOf(item) > -1
-  });
-  setting = setting.length == 0 ? from :setting;
-  return setting
-}
-
-var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
-var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
-
-window.valine = new Valine({
-  el:'#vcomment',
-  appId: 'u71gOFSYAVcNzb7WFBWSTdrb-gzGzoHsz',
-  appKey: 'LGQc6I41MV1C6nt976QDCaiH',
-  notify: false,
-  verify: false,
-  placeholder: '看了这么久，不说点什么吗？试试在昵称处写下QQ号,别忘记邮箱哦╰(●’◡’●)╮',
-  avatar: 'monsterid',
-  meta: guestInfo,
-  pageSize: '10',
-  lang: 'zh-CN',
-  recordIP: true,
-  serverURLs: '',
-  emojiCDN: '',
-  emojiMaps: "",
-  enableQQ: true,
-  requiredFields: requiredFields
-});</script></div></article></main><footer id="footer" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By 辛猿毅码</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://hardape.top" target="_blank" rel="noopener">blog</a>!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode far fa-moon" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
- <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script src="/js/third-party/click_heart.js"></script><script src="/js/search/local-search.js"></script></body></html>
+    include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
+    if page.comments !== false
+      include includes/comments/index.pug
